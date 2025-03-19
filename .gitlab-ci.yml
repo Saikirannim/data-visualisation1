@@ -6,8 +6,8 @@ build-job:
   stage: build
   script:
     - echo "Building the D3.js project..."
-    - npm install || echo "npm install failed, but continuing anyway"
-    - npm run build || echo "Build failed, but continuing..."
+    - npm install
+    - npm run build
   artifacts:
     paths:
       - dist/
