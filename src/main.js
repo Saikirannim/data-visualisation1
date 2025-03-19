@@ -1,14 +1,27 @@
-// testing code
 document.addEventListener('DOMContentLoaded', () => {
     // Clear previous content
     d3.select('#visualization').html('');
+    
+    const visualizationDiv = document.getElementById('visualization');
+    
+    // Create button
+    const button = document.createElement('button');
+    button.id = 'alertButton';
+    button.textContent = 'Alert';
+    button.style.marginBottom = '10px';
+    button.addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+    
+    // Add button to the visualization container
+    visualizationDiv.appendChild(button);
     
     const data = [5, 10, 15, 20, 25];
     
     const width = 500;
     const height = 300;
     const margin = { top: 20, right: 20, bottom: 30, left: 40 };
-    
+
     const svg = d3.select('#visualization')
         .append('svg')
         .attr('width', width)
