@@ -14,6 +14,7 @@ build-job:
     - echo "Building the D3.js project..."
     - npm install
     - if npm run build; then echo "Build successful"; else echo "Build script missing!"; exit 1; fi
+    - ls -la dist  # Debugging: Check if dist/ was created
   artifacts:
     paths:
       - dist/
@@ -21,12 +22,16 @@ build-job:
 
 pages:
   stage: deploy
+  dependencies:
+    - build-job  # Ensure the pages job gets dist/ from build-job
   script:
     - echo "Deploying to GitLab Pages..."
     - mkdir -p public
+    - ls -la dist  # Debugging: Verify if dist/ is available before copying
+    - "if [ -d dist ]; then cp -r dist/* public/; else echo 'ERROR: dist/ directory missing!'; exit 1; fi"
   artifacts:
     paths:
       - public
-  only:
-    - main
-  timeout: 5m
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  timeout: "5m"
