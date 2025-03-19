@@ -24,8 +24,6 @@ pages:
   script:
     - echo "Deploying to GitLab Pages..."
     - mkdir -p public
-    - cp -r dist/* public/ || echo "No build output found"
-    - ls -la dist 
   artifacts:
     paths:
       - public
