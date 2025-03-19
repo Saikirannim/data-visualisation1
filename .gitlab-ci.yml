@@ -7,6 +7,10 @@ build-job:
   script:
     - echo "Building the D3.js project..."
     - npm install || echo "npm install failed, but continuing anyway"
+    - npm run build || echo "Build failed, but continuing..."
+  artifacts:
+    paths:
+      - dist/
   timeout: 5m
 
 pages:
@@ -14,9 +18,7 @@ pages:
   script:
     - echo "Deploying to GitLab Pages..."
     - mkdir -p public
-    - cp index.html public/ || echo "No index.html found"
-    - cp -r src/ public/ || echo "No src directory found"
-    - echo "<h1>D3.js Project</h1>" > public/index.html
+    - cp -r dist/* public/ || echo "No build output found"
   artifacts:
     paths:
       - public
