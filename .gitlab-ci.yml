@@ -13,11 +13,11 @@ build-job:
   script:
     - echo "Building the D3.js project..."
     - npm install
-    - npm run build
+    - if npm run build; then echo "Build successful"; else echo "Build script missing!"; exit 1; fi
   artifacts:
     paths:
       - dist/
-  timeout: 5m
+  timeout: "5m"
 
 pages:
   stage: deploy
