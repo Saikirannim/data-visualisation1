@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'Build process not defined. Add your build command here.'"
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
