@@ -8,8 +8,12 @@ An application which shows a variety of graphs for air quality data. The data is
 - Kunal sharma 
 
 `/data_set`: the chosen data set
+
 `/personas`: example user scenarios for the application
+
 `/protoypes`: paper and Figma prototypes for a bunch of graphs, may not represent the final choices
+
 `/wireframes` `/user_flows`: prototypes for UI
+
 `/src`: the actual code
 
