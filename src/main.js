@@ -151,6 +151,7 @@ function onClick(_, p) {
         .attrTween("d", d => () => arc(d.current));
         
     addText(p);
+    addNav(p);
 }
 
 function addText(textRoot) {
@@ -221,6 +222,32 @@ function addText(textRoot) {
     }
 }
 
+function addNav(navRoot) {
+    d3.select(".navContainer")?.remove();
+    
+    const x = (width / 2) * -1
+    const y = ((height / 2) * -1) - textMargin;
+    
+    const navContainer = svg.append("g")
+        .attr("class", "navContainer")
+        .attr("transform", `translate(${x},${y})`);
+    
+    let offset = 1;
+        
+   for (const ancestor of navRoot.ancestors().toReversed()) {
+       navContainer.append("text")
+           .attr("dy", `${offset}em`)
+           .text(ancestor.data[0] || "Air pollutants")
+           .datum(ancestor)
+           .style("fill", getColour)
+           .on("click", onClick);
+       
+       offset += 1.2;
+   }
+        
+    
+}
+
 function computeValues(d) {
     d.current = d;
     
@@ -272,4 +299,5 @@ const centre = svg.append("circle")
     .on("click", onClick);
 
 addText(data);
+addNav(data);
 addClickTargets(paths);
