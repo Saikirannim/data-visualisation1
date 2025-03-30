@@ -5,23 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D3.js Project</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+        .sunburst {
+            width: 100%;
+            height: 600px;
         }
-        svg {
-            border: 1px solid #ccc;
+    
+        .sunburst .textContainer {
+            text-anchor: middle;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+    
+        .sunburst .textContainer text {
+            font-family: system-ui, sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            z-index: 200;
+        }
+        
+        .sunburst .textContainer .percentage {
+            font-weight: 600;
+        }
+        
+        .sunburst .centre {
+            fill: white;
+        }
+        
+        .sunburst .arcPart[data-depth="0"] {
+            display: none;
+        }
+        
+        .sunburst .arcPart {
+            stroke: white;
+        }
+        
+        .sunburst .clickableArc,
+        .sunburst .centre,
+        .sunburst .textContainer g {
+            cursor: pointer;
+        }
+        
+        .sunburst .clickableArc, .sunburst .textContainer g {
+            transition: opacity 0.1s ease-in-out;
+        }
+        
+        .sunburst .clickableArc:hover,
+        .sunburst .textContainer g:hover {
+            opacity: 0.5;
+        }
+        
+        .sunburst .arcPart[data-depth="4"] {
+            opacity: 0.6;
+        }
+        
+        .sunburst .arcPart[data-depth="5"] {
+            opacity: 0.3;
         }
     </style>
-    <!-- Load D3.js from CDN -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <h1>D3.js Visualization</h1>
-    <div id="visualization"></div>
-    
-    <!-- Remove the node_modules reference and keep only the main.js script -->
-    <script src="src/main.js"></script>
+    <svg class="sunburst"></svg>
+    <script src="src/main.js" type="module"></script>
 </body>
 </html>
