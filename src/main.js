@@ -129,6 +129,7 @@ function addClickTargets(paths) {
 
 function onClick(_, p) {
     const pWidth = p.x1 - p.x0;
+    let cachedPath;
 
     centre
         .datum(p?.parent)
@@ -146,17 +147,20 @@ function onClick(_, p) {
         }
     })
         .transition()
-        .duration(200)
+        .duration(150)
         .tween("", d => t => d.current = d3.interpolate(d.current, d.target)(t))
-        .attrTween("d", d => () => arc(d.current));
+        .attrTween("d", d => () => {
+            const path = arc(d.current);
+            if (path.includes("NaN")) return cachedPath;
+            cachedPath = path;
+            return path;
+        });
         
     addText(p);
     addNav(p);
 }
 
 function addText(textRoot) {
-    //TODO: Hierarchical top label (see Figma design), also clickable
-    
     const arcOffset = (textRoot.depth * -30) + (sizeOffset / 2);
     const textArc = d3.arc()
         .startAngle(d => d.x0)
