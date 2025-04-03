@@ -5,7 +5,7 @@ const uiHeight = 50;
 
 // Load the CSV data
 d3.csv("data_set/air-pollutant-emissions-2012-2019.csv").then(data => {
-  //Get all unique years and fuels
+  // Step 1: Get all unique years and fuels
   const allYears = [...new Set(data.map(d => d.year))].sort();
   const allFuels = [...new Set(data.map(d => d.fuel))].filter(f => f !== "NA");
   console.log("Unique years:", allYears);
@@ -38,6 +38,12 @@ d3.csv("data_set/air-pollutant-emissions-2012-2019.csv").then(data => {
       child.y1 = y0 + child.y1 / height * (y1 - y0);
     }
   }
+
+  // Treemap layout
+  const treemap = d3.treemap().tile(tile);
+
+  // Variable to hold the current group
+  let group;
 
   // Function to build hierarchy and update treemap
   function updateTreemap(selectedYear) {
@@ -79,26 +85,32 @@ d3.csv("data_set/air-pollutant-emissions-2012-2019.csv").then(data => {
       .sort((a, b) => b.value - a.value);
 
     // Compute initial layout
-    const treemap = d3.treemap().tile(tile);
     treemap(hierarchy);
+
+    // Reset scales to root level
+    x.domain([hierarchy.x0, hierarchy.x1]);
+    y.domain([hierarchy.y0, hierarchy.y1]);
 
     // Clear previous treemap content
     svg.selectAll(".treemap-group").remove();
 
-    // Display the root
-    let group = svg.append("g")
+    // Display the root (fuels only)
+    group = svg.append("g")
       .attr("class", "treemap-group")
       .call(render, hierarchy);
 
     function render(group, root) {
       const node = group
         .selectAll("g")
-        .data(root.children || []) // Only children (fuels or pollutants)
+        .data(root.children || [])
         .join("g");
 
       node.filter(d => d.children)
         .attr("cursor", "pointer")
-        .on("click", (event, d) => zoomin(d));
+        .on("click", (event, d) => {
+          event.stopPropagation();
+          zoomin(d);
+        });
 
       node.append("rect")
         .attr("fill", d => color(d.data.name))
@@ -226,11 +238,9 @@ d3.csv("data_set/air-pollutant-emissions-2012-2019.csv").then(data => {
           .call(position, root))
         .call(t => group1.transition(t)
           .call(position, root));
-    }
 
-    // Initial scales
-    x.domain([hierarchy.x0, hierarchy.x1]);
-    y.domain([hierarchy.y0, hierarchy.y1]);
+      console.log("Zoomed out to fuels:", root.children.map(c => `${c.data.name} (${c.value.toFixed(0)})`));
+    }
 
     // Click to zoom out
     svg.on("click", (event) => {
