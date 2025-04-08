@@ -1,0 +1,685 @@
+﻿sector,class,sub_class,fuel,year,pm10,pm2_5,co,nox,so2
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2012,0.33,0.25,8.3,1.54,3.89
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2013,1.94,1.45,48.12,8.94,22.53
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2014,2.25,1.69,55.84,10.38,26.15
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2015,0.67,0.5,16.71,3.1,7.82
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2016,1.53,1.15,37.91,7.04,17.75
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2017,1.56,1.17,38.82,7.21,18.18
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2018,2.52,1.89,62.47,11.61,29.26
+Energy (combustion),Agriculture/forestry/fishing,NA,Bituminous coal,2019,1.78,1.33,44.06,8.19,20.63
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2012,256.62,256.62,894.6,6953.47,6.24
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2013,279.67,279.67,974.96,7578.08,6.8
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2014,290.94,290.94,1014.26,7883.6,7.07
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2015,279.72,279.72,975.14,7579.49,6.8
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2016,274.02,274.02,955.28,7425.13,6.66
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2017,242.18,242.18,844.26,6562.18,5.88
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2018,250.51,250.51,873.3,6787.94,6.09
+Energy (combustion),Agriculture/forestry/fishing,NA,Diesel,2019,275.65,275.65,960.96,7469.28,6.7
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2012,40.02,40.02,144.23,1121.07,2154.72
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2013,35.12,35.12,126.57,983.79,1890.86
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2014,40.47,40.47,145.85,1133.69,2178.98
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2015,27.39,27.39,98.74,767.45,1475.06
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2016,23.12,23.12,83.33,647.67,1244.84
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2017,14.49,14.49,52.21,405.82,779.99
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2018,19.31,19.31,69.61,541.09,1039.99
+Energy (combustion),Agriculture/forestry/fishing,NA,Fuel oil,2019,16.09,16.09,58.01,450.87,866.58
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2012,0.05,0.05,1.83,4.68,0.01
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2013,0.05,0.05,2.06,5.25,0.02
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2014,0.05,0.05,2.11,5.39,0.02
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2015,0.06,0.06,2.32,5.92,0.02
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2016,0.06,0.06,2.43,6.2,0.02
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2017,0.07,0.07,2.57,6.56,0.02
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2018,0.08,0.08,2.99,7.62,0.02
+Energy (combustion),Agriculture/forestry/fishing,NA,LPG,2019,0.08,0.08,3.08,7.86,0.03
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2012,1.5,1.13,19.25,3.58,9.01
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2013,1.1,0.82,14.07,2.61,6.59
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2014,1.31,0.98,16.75,3.11,7.85
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2015,1.47,1.1,18.83,3.5,8.82
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2016,1.69,1.27,21.67,4.03,10.15
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2017,1.08,0.81,13.87,2.58,6.49
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2018,0.65,0.49,8.37,1.56,3.92
+Energy (combustion),Agriculture/forestry/fishing,NA,Lignite coal,2019,0.8,0.6,10.2,1.89,4.78
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2012,1.51,1.51,45.31,115.62,0.62
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2013,1.5,1.5,44.87,114.5,0.62
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2014,1.58,1.58,47.32,120.76,0.65
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2015,1.6,1.6,47.8,121.96,0.66
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2016,1.24,1.24,37.26,95.08,0.51
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2017,1.4,1.4,42.04,107.28,0.58
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2018,1.32,1.32,39.42,100.59,0.54
+Energy (combustion),Agriculture/forestry/fishing,NA,Natural gas,2019,1.31,1.31,39.14,99.89,0.54
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2012,26.82,26.82,92.94,722.37,0.65
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2013,43.72,43.72,151.51,1177.63,1.06
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2014,27.22,27.22,94.33,733.18,0.66
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2015,22.65,22.65,78.5,610.18,0.55
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2016,26.9,26.9,93.2,724.41,0.65
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2017,19.9,19.9,68.95,535.95,0.48
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2018,19.47,19.47,67.46,524.35,0.47
+Energy (combustion),Agriculture/forestry/fishing,NA,Petrol,2019,20.96,20.96,72.62,564.48,0.51
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2012,183.06,137.29,3323.11,617.51,1556.26
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2013,162.03,121.53,2941.49,546.59,1377.54
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2014,77.34,58,1403.93,260.88,657.48
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2015,104.91,78.68,1904.52,353.9,891.91
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2016,56.49,42.37,1025.43,190.55,480.22
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2017,135.91,101.93,2467.22,458.46,1155.43
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2018,105.76,79.32,1919.84,356.75,899.09
+Energy (combustion),Agriculture/forestry/fishing,NA,Sub-bituminous coal,2019,110.12,82.59,1999.02,371.46,936.17
+Energy (combustion),Commercial/institutional,NA,Biogas,2012,0.99,0.99,29.7,75.79,0.41
+Energy (combustion),Commercial/institutional,NA,Biogas,2013,1.03,1.03,30.87,78.77,0.43
+Energy (combustion),Commercial/institutional,NA,Biogas,2014,1.05,1.05,31.57,80.56,0.44
+Energy (combustion),Commercial/institutional,NA,Biogas,2015,1.12,1.12,33.62,85.78,0.46
+Energy (combustion),Commercial/institutional,NA,Biogas,2016,1.25,1.25,37.39,95.4,0.52
+Energy (combustion),Commercial/institutional,NA,Biogas,2017,1.13,1.13,33.72,86.05,0.47
+Energy (combustion),Commercial/institutional,NA,Biogas,2018,1.08,1.08,32.37,82.61,0.45
+Energy (combustion),Commercial/institutional,NA,Biogas,2019,1.07,1.07,31.98,81.6,0.44
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2012,1.81,1.36,44.85,8.33,21
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2013,1.6,1.2,39.75,7.39,18.62
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2014,1.46,1.1,36.27,6.74,16.99
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2015,1.56,1.17,38.67,7.19,18.11
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2016,1.58,1.19,39.32,7.31,18.41
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2017,0.36,0.27,8.86,1.65,4.15
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2018,3.58,2.69,88.97,16.53,41.67
+Energy (combustion),Commercial/institutional,NA,Bituminous coal,2019,3.86,2.89,95.73,17.79,44.83
+Energy (combustion),Commercial/institutional,NA,Diesel,2012,71.23,71.23,248.31,1930.06,1.73
+Energy (combustion),Commercial/institutional,NA,Diesel,2013,70.83,70.83,246.93,1919.33,1.72
+Energy (combustion),Commercial/institutional,NA,Diesel,2014,78.46,78.46,273.52,2126.02,1.91
+Energy (combustion),Commercial/institutional,NA,Diesel,2015,84.29,84.29,293.85,2284,2.05
+Energy (combustion),Commercial/institutional,NA,Diesel,2016,90.59,90.59,315.81,2454.67,2.2
+Energy (combustion),Commercial/institutional,NA,Diesel,2017,105.26,105.26,366.96,2852.32,2.56
+Energy (combustion),Commercial/institutional,NA,Diesel,2018,89.16,89.16,310.83,2415.96,2.17
+Energy (combustion),Commercial/institutional,NA,Diesel,2019,108.41,108.41,377.93,2937.51,2.63
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2012,0.21,0.21,0.74,5.76,11.08
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2013,0.39,0.39,1.41,10.99,21.12
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2014,0.09,0.09,0.31,2.41,4.63
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2015,0.16,0.16,0.59,4.62,8.87
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2016,0.77,0.77,2.76,21.49,41.3
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2017,1.11,1.11,4,31.13,59.83
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2018,2.65,2.65,9.55,74.2,142.61
+Energy (combustion),Commercial/institutional,NA,Fuel oil,2019,8.65,8.65,31.18,242.32,465.75
+Energy (combustion),Commercial/institutional,NA,LPG,2012,0.89,0.89,34.52,88.1,0.28
+Energy (combustion),Commercial/institutional,NA,LPG,2013,0.91,0.91,35.17,89.74,0.29
+Energy (combustion),Commercial/institutional,NA,LPG,2014,0.93,0.93,35.95,91.74,0.29
+Energy (combustion),Commercial/institutional,NA,LPG,2015,1.04,1.04,40.18,102.53,0.33
+Energy (combustion),Commercial/institutional,NA,LPG,2016,1.11,1.11,42.99,109.7,0.35
+Energy (combustion),Commercial/institutional,NA,LPG,2017,1.24,1.24,47.94,122.34,0.39
+Energy (combustion),Commercial/institutional,NA,LPG,2018,1.26,1.26,49.04,125.13,0.4
+Energy (combustion),Commercial/institutional,NA,LPG,2019,1.31,1.31,50.71,129.39,0.41
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2012,45.8,34.35,586.06,108.9,274.46
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2013,26.54,19.91,339.6,63.11,159.04
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2014,10.4,7.8,133.04,24.72,62.3
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2015,27.97,20.98,357.86,66.5,167.59
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2016,39.89,29.92,510.41,94.84,239.03
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2017,46.97,35.23,601.04,111.69,281.48
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2018,23.5,17.62,300.63,55.86,140.79
+Energy (combustion),Commercial/institutional,NA,Lignite coal,2019,16.52,12.39,211.33,39.27,98.97
+Energy (combustion),Commercial/institutional,NA,Natural gas,2012,7.65,7.65,229.03,584.41,3.16
+Energy (combustion),Commercial/institutional,NA,Natural gas,2013,7.55,7.55,226.03,576.77,3.12
+Energy (combustion),Commercial/institutional,NA,Natural gas,2014,8.63,8.63,258.41,659.39,3.56
+Energy (combustion),Commercial/institutional,NA,Natural gas,2015,8.76,8.76,262.22,669.12,3.62
+Energy (combustion),Commercial/institutional,NA,Natural gas,2016,7.86,7.86,235.36,600.56,3.25
+Energy (combustion),Commercial/institutional,NA,Natural gas,2017,7.84,7.84,234.62,598.68,3.24
+Energy (combustion),Commercial/institutional,NA,Natural gas,2018,8.36,8.36,250.18,638.39,3.45
+Energy (combustion),Commercial/institutional,NA,Natural gas,2019,8.27,8.27,247.58,631.76,3.41
+Energy (combustion),Commercial/institutional,NA,Petrol,2012,3.26,3.26,11.29,87.78,0.08
+Energy (combustion),Commercial/institutional,NA,Petrol,2013,5.84,5.84,20.25,157.36,0.14
+Energy (combustion),Commercial/institutional,NA,Petrol,2014,4.75,4.75,16.46,127.97,0.11
+Energy (combustion),Commercial/institutional,NA,Petrol,2015,5.62,5.62,19.46,151.26,0.14
+Energy (combustion),Commercial/institutional,NA,Petrol,2016,9,9,31.2,242.53,0.22
+Energy (combustion),Commercial/institutional,NA,Petrol,2017,11.82,11.82,40.97,318.43,0.29
+Energy (combustion),Commercial/institutional,NA,Petrol,2018,10.28,10.28,35.62,276.85,0.25
+Energy (combustion),Commercial/institutional,NA,Petrol,2019,14.19,14.19,49.17,382.2,0.34
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2012,37.9,28.42,687.96,127.84,322.18
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2013,54.19,40.64,983.67,182.79,460.66
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2014,42.08,31.56,763.85,141.94,357.72
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2015,29.1,21.82,528.25,98.16,247.39
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2016,25.23,18.92,457.95,85.1,214.47
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2017,17.43,13.08,316.5,58.81,148.22
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2018,18.19,13.64,330.14,61.35,154.61
+Energy (combustion),Commercial/institutional,NA,Sub-bituminous coal,2019,28.08,21.06,509.67,94.71,238.69
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2012,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2013,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2014,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2015,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2016,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2017,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2018,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Diesel,2019,NA,NA,NA,NA,NA
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2012,7.59,7.59,227.16,579.66,3.13
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2013,6.02,6.02,180.15,459.7,2.48
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2014,6.46,6.46,193.42,493.55,2.67
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2015,5.94,5.94,177.89,453.93,2.45
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2016,5.24,5.24,157,400.63,2.17
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2017,5.76,5.76,172.48,440.13,2.38
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2018,6.99,6.99,209.2,533.82,2.89
+Energy (combustion),Energy industries,Manufacture of solid fuels and other,Natural gas,2019,6.36,6.36,190.51,486.14,2.63
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2012,10.93,10.93,187.61,1776.03,4181.67
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2013,11.07,11.07,190.08,1799.44,4236.79
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2014,10.66,10.66,183.03,1732.69,4079.62
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2015,11.54,11.54,198.07,1875.04,4414.78
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2016,9.51,9.51,163.24,1545.38,3638.6
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2017,9.56,9.56,164.05,1553.01,3656.57
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2018,7.99,7.99,137.09,1297.78,3055.63
+Energy (combustion),Energy industries,Petroleum refining,Crude oil,2019,8.88,8.88,152.48,1443.49,3398.7
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2012,2.51,2.51,75.08,191.58,1.04
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2013,1.97,1.97,59.05,150.67,0.81
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2014,2.03,2.03,60.86,155.3,0.84
+Energy (combustion),Residential,NA,Diesel,2018,2.18,2.18,7.6,59.05,0.05
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2015,1.98,1.98,59.25,151.2,0.82
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2016,2.88,2.88,86.27,220.14,1.19
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2017,3.12,3.12,93.32,238.13,1.29
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2018,3.79,3.79,113.43,289.43,1.56
+Energy (combustion),Energy industries,Petroleum refining,Natural gas,2019,3.92,3.92,117.39,299.54,1.62
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2012,0.81,0.81,24.39,62.24,0.34
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2013,0.85,0.85,25.47,64.99,0.35
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2014,0.79,0.79,23.64,60.33,0.33
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2015,0.73,0.73,21.91,55.9,0.3
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2016,0.57,0.57,16.94,43.22,0.23
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2017,0.63,0.63,18.71,47.76,0.26
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2018,0.62,0.62,18.62,47.51,0.26
+Energy (combustion),Energy industries,Pipeline transport,Natural gas,2019,0.71,0.71,21.33,54.44,0.29
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2012,9.55,8.12,944.84,254.62,5.46
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2013,8.87,7.54,877.54,236.48,5.07
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2014,10.26,8.72,1015.16,273.57,5.87
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2015,11,9.36,1088.84,293.42,6.29
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2016,11.33,9.63,1120.89,302.06,6.48
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2017,12.04,10.24,1191.29,321.03,6.88
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2018,12.06,10.25,1193.3,321.57,6.9
+Energy (combustion),Energy industries,Public electricity and heat production,Biogas,2019,12.12,10.31,1199.48,323.24,6.93
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2012,3.82,2.86,0.88,21.26,44.34
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2013,0.48,0.36,0.11,2.67,5.58
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2014,2.1,1.57,0.49,11.69,24.38
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2015,17.31,12.98,4.02,96.45,201.22
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2016,9.67,7.25,2.24,53.85,112.34
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2017,10.03,7.52,2.33,55.88,116.57
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2018,3.84,2.88,0.89,21.42,44.69
+Energy (combustion),Energy industries,Public electricity and heat production,Bituminous coal,2019,0.69,0.52,0.16,3.83,7.99
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2012,0.12,0.03,0.64,2.62,0.02
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2013,0.12,0.03,0.64,2.58,0.02
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2014,0.11,0.03,0.6,2.43,0.02
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2015,0.04,0.01,0.21,0.84,0.01
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2016,0.11,0.03,0.6,2.43,0.02
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2017,0.18,0.05,0.97,3.92,0.03
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2018,0.37,0.09,1.96,7.97,0.06
+Energy (combustion),Energy industries,Public electricity and heat production,Diesel,2019,0.12,0.03,0.61,2.48,0.02
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2012,8.77,6.58,1.05,25.2,52.58
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2013,7.22,5.41,0.86,20.74,43.26
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2014,6.75,5.06,0.81,19.39,40.44
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2015,6.19,4.64,0.74,17.77,37.07
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2016,2.64,1.98,0.32,7.57,15.8
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2017,6.65,4.99,0.8,19.11,39.86
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2018,8.65,6.49,1.03,24.86,51.86
+Energy (combustion),Energy industries,Public electricity and heat production,Lignite coal,2019,9.43,7.07,1.13,27.09,56.52
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2012,76.05,76.05,2721.92,5730.16,27.92
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2013,72.75,72.75,2604.08,5482.1,26.71
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2014,61.34,61.34,2195.71,4622.38,22.52
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2015,59.29,59.29,2122.18,4467.59,21.77
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2016,51.96,51.96,1859.84,3915.31,19.08
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2017,62.31,62.31,2230.45,4695.52,22.88
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2018,50.99,50.99,1825.14,3842.27,18.72
+Energy (combustion),Energy industries,Public electricity and heat production,Natural gas,2019,51.41,51.41,1840.15,3873.86,18.87
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2012,1492.45,1119.34,253.18,6082.13,12688.08
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2013,895.03,671.28,151.83,3647.5,7609.14
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2014,670.23,502.67,113.7,2731.37,5697.98
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2015,587.11,440.33,99.6,2392.64,4991.34
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2016,233.38,175.04,39.59,951.1,1984.11
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2017,272.95,204.71,46.3,1112.36,2320.51
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2018,512.48,384.36,86.94,2088.48,4356.84
+Energy (combustion),Energy industries,Public electricity and heat production,Sub-bituminous coal,2019,897.41,673.06,152.24,3657.2,7629.38
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2012,115.46,86.59,2865.41,532.46,1341.91
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2013,265.57,199.18,6591.02,1224.76,3086.67
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2014,216.95,162.72,5384.43,1000.54,2521.6
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2015,144.51,108.38,3586.5,666.45,1679.61
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2016,133.77,100.33,3320.05,616.94,1554.83
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2017,132.35,99.26,3284.68,610.36,1538.26
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2018,109.83,82.37,2725.69,506.49,1276.48
+Energy (combustion),Manufacturing industries and construction,NA,Bituminous coal,2019,150.3,112.72,3730.17,693.15,1746.89
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2012,251.64,251.64,877.24,6818.58,6.11
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2013,287.7,287.7,1002.95,7795.67,6.99
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2014,294.46,294.46,1026.54,7978.99,7.15
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2015,286.99,286.99,1000.48,7776.46,6.97
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2016,321.61,321.61,1121.18,8714.64,7.81
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2017,319.09,319.09,1112.4,8646.35,7.75
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2018,319.07,319.07,1112.31,8645.68,7.75
+Energy (combustion),Manufacturing industries and construction,NA,Diesel,2019,331.4,331.4,1155.31,8979.95,8.05
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2012,19.46,19.46,70.14,545.21,1047.91
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2013,27.35,27.35,98.56,766.08,1472.43
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2014,21.31,21.31,76.82,597.11,1147.66
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2015,25.48,25.48,91.84,713.86,1372.06
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2016,21.57,21.57,77.75,604.29,1161.46
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2017,36.03,36.03,129.85,1009.26,1939.83
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2018,19.46,19.46,70.15,545.23,1047.96
+Energy (combustion),Manufacturing industries and construction,NA,Fuel oil,2019,23.23,23.23,83.74,650.86,1250.97
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2012,2.39,2.39,92.71,236.56,0.76
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2013,2.35,2.35,91.19,232.7,0.75
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2014,2.6,2.6,100.87,257.39,0.82
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2015,2.69,2.69,104.57,266.83,0.85
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2016,2.77,2.77,107.35,273.93,0.88
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2017,2.89,2.89,112.29,286.55,0.92
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2018,2.9,2.9,112.36,286.72,0.92
+Energy (combustion),Manufacturing industries and construction,NA,LPG,2019,3.02,3.02,117.02,298.6,0.96
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2012,316.88,237.66,4054.57,753.43,1898.81
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2013,278.62,208.97,3565.11,662.47,1669.59
+Energy (combustion),Residential,NA,Diesel,2019,2.44,2.44,8.49,66,0.06
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2014,312.29,234.22,3995.95,742.53,1871.36
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2015,308.24,231.18,3944.12,732.9,1847.08
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2016,284.29,213.22,3637.64,675.95,1703.56
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2017,319.77,239.83,4091.57,760.3,1916.14
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2018,352.86,264.65,4515.02,838.99,2114.44
+Energy (combustion),Manufacturing industries and construction,NA,Lignite coal,2019,347.74,260.81,4449.52,826.82,2083.77
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2012,47.83,47.83,1432.29,3654.8,19.76
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2013,51.64,51.64,1546.3,3945.73,21.33
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2014,63.59,63.59,1904,4858.48,26.26
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2015,60.89,60.89,1823.11,4652.08,25.15
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2016,59.13,59.13,1770.48,4517.79,24.42
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2017,60.02,60.02,1797.27,4586.13,24.79
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2018,56.79,56.79,1700.41,4338.98,23.45
+Energy (combustion),Manufacturing industries and construction,NA,Natural gas,2019,66.93,66.93,2004.18,5114.1,27.64
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2012,1.7,1.7,5.9,45.87,0.04
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2013,2.92,2.92,10.11,78.55,0.07
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2014,2.96,2.96,10.26,79.72,0.07
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2015,8.53,8.53,29.56,229.77,0.21
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2016,9.54,9.54,33.05,256.85,0.23
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2017,4.33,4.33,15,116.56,0.1
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2018,1.39,1.39,4.82,37.5,0.03
+Energy (combustion),Manufacturing industries and construction,NA,Petrol,2019,1.57,1.57,5.43,42.17,0.04
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2012,621.09,465.81,11274.85,2095.11,5280.17
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2013,584.98,438.73,10619.4,1973.32,4973.21
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2014,624.74,468.56,11341.28,2107.46,5311.28
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2015,749.33,562,13602.89,2527.71,6370.42
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2016,680.57,510.43,12354.66,2295.76,5785.85
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2017,628.99,471.74,11418.34,2121.78,5347.36
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2018,774.73,581.05,14064,2613.4,6586.36
+Energy (combustion),Manufacturing industries and construction,NA,Sub-bituminous coal,2019,786.36,589.77,14275.12,2652.63,6685.23
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2012,7017.95,6140.71,30201.77,4821.69,1006.73
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2013,6618.69,5791.35,28483.53,4547.37,949.45
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2014,6755.3,5910.88,29071.41,4641.23,969.05
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2015,6754.59,5910.27,29068.4,4640.74,968.95
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2016,6649.72,5818.5,28617.06,4568.69,953.9
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2017,6654.8,5822.95,28638.93,4572.18,954.63
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2018,6457.71,5650.5,27790.76,4436.77,926.36
+Energy (combustion),Manufacturing industries and construction,NA,Wood,2019,6392.19,5593.17,27508.79,4391.75,916.96
+Energy (combustion),Residential,NA,Bituminous coal,2012,40.06,35.26,302.76,4.4,26.81
+Energy (combustion),Residential,NA,Bituminous coal,2013,7.74,6.81,58.47,0.85,5.18
+Energy (combustion),Residential,NA,Bituminous coal,2014,8.01,7.05,60.53,0.88,5.36
+Energy (combustion),Residential,NA,Bituminous coal,2015,6.77,5.96,51.17,0.74,4.53
+Energy (combustion),Residential,NA,Bituminous coal,2016,5.53,4.87,41.8,0.61,3.7
+Energy (combustion),Residential,NA,Bituminous coal,2017,4.49,3.95,33.9,0.49,3
+Energy (combustion),Residential,NA,Bituminous coal,2018,11.02,9.7,83.31,1.21,7.38
+Energy (combustion),Residential,NA,Bituminous coal,2019,3.18,2.8,24.03,0.35,2.13
+Energy (combustion),Residential,NA,Diesel,2012,4.67,4.67,16.27,126.46,0.11
+Energy (combustion),Residential,NA,Diesel,2013,8.52,8.52,29.71,230.97,0.21
+Energy (combustion),Residential,NA,Diesel,2014,1.76,1.76,6.15,47.78,0.04
+Energy (combustion),Residential,NA,Diesel,2015,1.91,1.91,6.68,51.89,0.05
+Energy (combustion),Residential,NA,Diesel,2016,2.25,2.25,7.83,60.83,0.05
+Energy (combustion),Residential,NA,Diesel,2017,2.44,2.44,8.51,66.13,0.06
+Energy (combustion),Residential,NA,Fuel oil,2012,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2013,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2014,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2015,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2016,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2017,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2018,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Fuel oil,2019,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,LPG,2012,18.9,18.31,76.02,149.12,0.7
+Energy (combustion),Residential,NA,LPG,2013,18.7,18.12,75.23,147.57,0.69
+Energy (combustion),Residential,NA,LPG,2014,19.32,18.71,77.7,152.42,0.72
+Energy (combustion),Residential,NA,LPG,2015,20.51,19.87,82.53,161.88,0.76
+Energy (combustion),Residential,NA,LPG,2016,20.79,20.14,83.65,164.09,0.77
+Energy (combustion),Residential,NA,LPG,2017,22.69,21.99,91.3,179.08,0.84
+Energy (combustion),Residential,NA,LPG,2018,23.31,22.58,93.76,183.92,0.87
+Energy (combustion),Residential,NA,LPG,2019,24.1,23.35,96.95,190.17,0.89
+Energy (combustion),Residential,NA,Lignite coal,2012,275.26,242.23,1072.46,15.6,94.96
+Energy (combustion),Residential,NA,Lignite coal,2013,179.09,157.6,697.77,10.15,61.78
+Energy (combustion),Residential,NA,Lignite coal,2014,203.84,179.38,794.2,11.55,70.32
+Energy (combustion),Residential,NA,Lignite coal,2015,268.41,236.2,1045.77,15.21,92.6
+Energy (combustion),Residential,NA,Lignite coal,2016,208.56,183.53,812.57,11.82,71.95
+Energy (combustion),Residential,NA,Lignite coal,2017,139.72,122.95,544.36,7.92,48.2
+Energy (combustion),Residential,NA,Lignite coal,2018,36.33,31.97,141.56,2.06,12.53
+Energy (combustion),Residential,NA,Lignite coal,2019,42.88,37.74,167.09,2.43,14.79
+Energy (combustion),Residential,NA,Natural gas,2012,9.27,9.27,163.18,320.09,2.51
+Energy (combustion),Residential,NA,Natural gas,2013,9.12,9.12,160.62,315.07,2.47
+Energy (combustion),Residential,NA,Natural gas,2014,9.75,9.75,171.65,336.7,2.64
+Energy (combustion),Residential,NA,Natural gas,2015,10.16,10.16,178.78,350.68,2.75
+Energy (combustion),Residential,NA,Natural gas,2016,9.48,9.48,166.85,327.28,2.57
+Energy (combustion),Residential,NA,Natural gas,2017,10.08,10.08,177.38,347.94,2.73
+Energy (combustion),Residential,NA,Natural gas,2018,10.02,10.02,176.35,345.91,2.71
+Energy (combustion),Residential,NA,Natural gas,2019,10.09,10.09,177.69,348.54,2.73
+Energy (combustion),Residential,NA,Petrol,2012,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2013,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2014,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2015,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2016,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2017,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2018,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Petrol,2019,NA,NA,NA,NA,NA
+Energy (combustion),Residential,NA,Sub-bituminous coal,2012,187.33,164.85,1035.52,15.06,91.69
+Energy (combustion),Residential,NA,Sub-bituminous coal,2013,168.43,148.22,931.01,13.54,82.43
+Energy (combustion),Residential,NA,Sub-bituminous coal,2014,163.66,144.02,904.68,13.16,80.1
+Energy (combustion),Residential,NA,Sub-bituminous coal,2015,160.55,141.28,887.46,12.91,78.58
+Energy (combustion),Residential,NA,Sub-bituminous coal,2016,161.19,141.84,890.97,12.96,78.89
+Energy (combustion),Residential,NA,Sub-bituminous coal,2017,167.78,147.65,927.42,13.49,82.12
+Energy (combustion),Residential,NA,Sub-bituminous coal,2018,248.03,218.26,1371.01,19.94,121.39
+Energy (combustion),Residential,NA,Sub-bituminous coal,2019,211.12,185.79,1167.01,16.97,103.33
+Energy (combustion),Residential,NA,Wood,2012,10817.52,10817.52,197194.32,704.27,281.71
+Energy (combustion),Residential,NA,Wood,2013,10817.52,10817.52,197194.32,704.27,281.71
+Energy (combustion),Residential,NA,Wood,2014,10801.41,10801.41,196900.72,703.22,281.29
+Energy (combustion),Residential,NA,Wood,2015,10785.3,10785.3,196607.11,702.17,280.87
+Energy (combustion),Residential,NA,Wood,2016,10769.2,10769.2,196313.51,701.12,280.45
+Energy (combustion),Residential,NA,Wood,2017,10753.09,10753.09,196019.9,700.07,280.03
+Energy (combustion),Residential,NA,Wood,2018,10736.99,10736.99,195726.3,699.02,279.61
+Energy (combustion),Residential,NA,Wood,2019,10736.99,10736.99,195726.3,699.02,279.61
+Transport,Aviation,Domestic (LTO),NA,2012,5.98,5.98,1350.68,1772.16,138.74
+Transport,Aviation,Domestic (LTO),NA,2013,6.2,6.2,1329.78,1776.46,138.12
+Transport,Aviation,Domestic (LTO),NA,2014,7,7,1372.01,1833.2,138.86
+Transport,Aviation,Domestic (LTO),NA,2015,7.67,7.67,1424.56,1905.44,140.62
+Transport,Aviation,Domestic (LTO),NA,2016,7.43,7.43,1367.18,1884.21,135.5
+Transport,Aviation,Domestic (LTO),NA,2017,7.8,7.8,1415.7,1970.64,141.39
+Transport,Aviation,Domestic (LTO),NA,2018,8.34,8.34,1502.85,2096.32,149.01
+Transport,Aviation,Domestic (LTO),NA,2019,8.23,8.23,1497.99,2093.31,149.86
+Transport,Aviation,International (LTO),NA,2012,3.92,3.92,468.71,824.88,38.86
+Transport,Aviation,International (LTO),NA,2013,3.93,3.93,459.22,842.33,39.63
+Transport,Aviation,International (LTO),NA,2014,4.17,4.17,471.89,879.57,41.82
+Transport,Aviation,International (LTO),NA,2015,4.13,4.13,495.2,920.68,43.64
+Transport,Aviation,International (LTO),NA,2016,4.46,4.46,532.74,1042.27,49.39
+Transport,Aviation,International (LTO),NA,2017,4.59,4.59,539.4,1129.22,52.92
+Transport,Aviation,International (LTO),NA,2018,4.81,4.81,569.88,1175.79,54.21
+Transport,Aviation,International (LTO),NA,2019,4.71,4.71,580.53,1219.86,55.26
+Transport,Railways,NA,Diesel,2012,246.45,231.59,542.36,2654.72,1.01
+Transport,Railways,NA,Diesel,2013,237.49,223.17,522.64,2558.18,0.97
+Transport,Railways,NA,Diesel,2014,229.59,215.75,505.25,2473.09,0.94
+Transport,Railways,NA,Diesel,2015,223.48,210,491.79,2407.19,0.92
+Transport,Railways,NA,Diesel,2016,209.24,196.62,460.47,2253.89,0.86
+Transport,Railways,NA,Diesel,2017,180.03,169.17,396.18,1939.19,0.74
+Transport,Railways,NA,Diesel,2018,195.54,183.74,430.31,2106.24,0.8
+Transport,Railways,NA,Diesel,2019,204.52,192.19,450.08,2203.03,0.84
+Transport,Road transportation,NA,Biodiesel,2012,16.24,16.24,48.47,168.67,0.17
+Transport,Road transportation,NA,Biodiesel,2013,5.35,5.35,16.58,57.02,0.06
+Transport,Road transportation,NA,Biodiesel,2014,5.92,5.92,19,64.09,0.07
+Transport,Road transportation,NA,Biodiesel,2015,5.6,5.6,18.74,61.9,0.07
+Transport,Road transportation,NA,Biodiesel,2016,4.42,4.42,15.07,49.57,0.06
+Transport,Road transportation,NA,Biodiesel,2017,3.03,3.03,10.73,36.51,0.05
+Transport,Road transportation,NA,Biodiesel,2018,3.65,3.65,13.26,46.65,0.06
+Transport,Road transportation,NA,Biodiesel,2019,4.66,4.66,17.43,63.53,0.08
+Transport,Road transportation,NA,Diesel,2012,3546.49,3546.49,10587.09,36843.02,37.4
+Transport,Road transportation,NA,Diesel,2013,3315.27,3315.27,10272.5,35336.29,37.61
+Transport,Road transportation,NA,Diesel,2014,3248.21,3248.21,10430.18,35192.25,39.31
+Transport,Road transportation,NA,Diesel,2015,3125.31,3125.31,10452.83,34517.67,40.67
+Transport,Road transportation,NA,Diesel,2016,3011.56,3011.56,10278.43,33810.77,41.41
+Transport,Road transportation,NA,Diesel,2017,3050.85,3050.85,10793.19,36742.42,46.12
+Transport,Road transportation,NA,Diesel,2018,2945.5,2945.5,10697.54,37635.08,48.26
+Transport,Road transportation,NA,Diesel,2019,2701.45,2701.45,10105.47,36841.26,48.16
+Transport,Road transportation,NA,LPG,2012,2.39,2.39,979.09,287.04,0.1
+Transport,Road transportation,NA,LPG,2013,1.89,1.89,780.29,228.75,0.08
+Transport,Road transportation,NA,LPG,2014,2.34,2.34,977.43,286.55,0.09
+Transport,Road transportation,NA,LPG,2015,2.23,2.23,939.52,275.44,0.09
+Transport,Road transportation,NA,LPG,2016,1.82,1.82,772.94,226.6,0.08
+Transport,Road transportation,NA,LPG,2017,1.39,1.39,593.48,173.99,0.06
+Transport,Road transportation,NA,LPG,2018,0.77,0.77,328.05,96.17,0.03
+Transport,Road transportation,NA,LPG,2019,0.79,0.79,339.21,99.44,0.03
+Transport,Road transportation,NA,Natural gas,2012,0.21,0.21,86.29,25.3,0.01
+Transport,Road transportation,NA,Natural gas,2013,0.04,0.04,18.28,5.36,0
+Transport,Road transportation,NA,Natural gas,2014,NA,NA,NA,NA,NA
+Transport,Road transportation,NA,Natural gas,2015,NA,NA,NA,NA,NA
+Transport,Road transportation,NA,Natural gas,2016,NA,NA,NA,NA,NA
+Transport,Road transportation,NA,Natural gas,2017,NA,NA,NA,NA,NA
+Transport,Road transportation,NA,Natural gas,2018,NA,NA,NA,NA,NA
+Transport,Road transportation,NA,Natural gas,2019,NA,NA,NA,NA,NA
+Transport,Road transportation,NA,Petrol,2012,663.8,663.8,169336.96,17824,48.02
+Transport,Road transportation,NA,Petrol,2013,652.91,652.91,153941.01,16073.13,47.55
+Transport,Road transportation,NA,Petrol,2014,653.62,653.62,140768.96,14612.46,48.1
+Transport,Road transportation,NA,Petrol,2015,666.14,666.14,129084.7,13350.71,49.5
+Transport,Road transportation,NA,Petrol,2016,675.01,675.01,118269.22,12120.66,50.55
+Transport,Road transportation,NA,Petrol,2017,686.84,686.84,108079.29,10988.91,51.75
+Transport,Road transportation,NA,Petrol,2018,678.1,678.1,94327.34,9474.34,51.33
+Transport,Road transportation,NA,Petrol,2019,676.73,676.73,84535.73,8459.37,51.25
+Transport,Shipping,NA,Fuel oil,2012,564.44,509.81,735.46,7886.2,6894.93
+Transport,Shipping,NA,Fuel oil,2013,750.29,677.68,977.62,10482.83,9165.17
+Transport,Shipping,NA,Fuel oil,2014,710.8,642.02,926.17,9931.21,8682.88
+Transport,Shipping,NA,Fuel oil,2015,827.51,747.43,1078.25,11561.83,10108.55
+Transport,Shipping,NA,Fuel oil,2016,524.09,473.37,682.88,7322.42,6402.01
+Transport,Shipping,NA,Fuel oil,2017,526.64,475.68,686.22,7358.17,6433.27
+Transport,Shipping,NA,Fuel oil,2018,511.67,462.15,666.7,7148.94,6250.34
+Transport,Shipping,NA,Fuel oil,2019,635.03,573.57,827.44,8872.47,7757.23
+Construction (non-combustion),Non-residential buildings,NA,NA,2012,1038.12,103.81,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2013,1204.48,120.45,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2014,1372,137.2,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2015,1449.95,144.99,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2016,1153.47,115.35,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2017,1232.45,123.24,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2018,1491.63,149.16,NA,NA,NA
+Construction (non-combustion),Non-residential buildings,NA,NA,2019,1454.53,145.45,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2012,158.96,15.9,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2013,192.25,19.23,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2014,210.25,21.03,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2015,213.48,21.35,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2016,239.01,23.9,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2017,234.1,23.41,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2018,228.71,22.87,NA,NA,NA
+Construction (non-combustion),Residential houses,NA,NA,2019,232.24,23.22,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2012,92.69,9.27,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2013,124.01,12.4,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2014,173.58,17.36,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2015,215.36,21.54,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2016,249.53,24.95,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2017,277.34,27.73,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2018,326.63,32.66,NA,NA,NA
+Construction (non-combustion),Residential other,NA,NA,2019,396.19,39.62,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2012,544.92,54.49,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2013,559.65,55.97,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2014,383.45,38.35,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2015,228.05,22.81,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2016,448.24,44.82,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2017,733.2,73.32,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2018,1020.09,102.01,NA,NA,NA
+Construction (non-combustion),Road construction,NA,NA,2019,1392.61,139.26,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2012,8.92,4.82,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2013,9.17,4.95,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2014,9.52,5.14,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2015,9.81,5.3,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2016,10.29,5.56,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2017,10.96,5.92,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2018,11.6,6.26,NA,NA,NA
+Road dust,Sealed roads,Buses,NA,2019,12.14,6.56,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2012,94.88,51.23,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2013,96.95,52.35,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2014,100.44,54.24,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2015,102.65,55.43,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2016,105.73,57.09,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2017,111.1,59.99,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2018,114.49,61.83,NA,NA,NA
+Road dust,Sealed roads,Heavy trucks,NA,2019,116,62.64,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2012,45.78,24.72,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2013,47.7,25.76,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2014,50.38,27.2,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2015,53.65,28.97,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2016,57.91,31.27,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2017,62.46,33.73,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2018,66.84,36.1,NA,NA,NA
+Road dust,Sealed roads,Light commercial,NA,2019,70.82,38.24,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2012,227.4,122.79,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2013,229.45,123.9,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2014,233.61,126.15,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2015,241.3,130.3,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2016,251.35,135.73,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2017,257.85,139.24,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2018,262.55,141.78,NA,NA,NA
+Road dust,Sealed roads,Light passenger,NA,2019,262.6,141.81,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2012,1.13,0.61,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2013,1.15,0.62,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2014,1.17,0.63,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2015,1.2,0.65,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2016,1.24,0.67,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2017,1.25,0.68,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2018,1.26,0.68,NA,NA,NA
+Road dust,Sealed roads,Motorcycles,NA,2019,1.25,0.68,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2012,15775.49,1550.44,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2013,16973.37,1668.16,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2014,16421.45,1613.92,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2015,15506.55,1524,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2016,15198.4,1493.72,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2017,15923.95,1565.03,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2018,15974.82,1570.02,NA,NA,NA
+Road dust,Unsealed roads,NA,NA,2019,16792.21,1650.36,NA,NA,NA
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2012,633.31,542.84,38958.24,324.65,5547.6
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2013,632.82,542.41,38927.88,324.4,5543.27
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2014,638.08,546.92,39251.64,327.1,5589.38
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2015,650.17,557.29,39995.16,333.29,5695.25
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2016,660.58,566.21,40635.96,338.63,5786.5
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2017,656.89,563.05,40408.92,336.74,5754.17
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2018,664.57,569.63,40881.36,340.68,5821.44
+Industrial (non-combustion),Metal industries,Aluminium production,NA,2019,685.65,587.7,42177.72,351.48,6006.04
+Industrial (non-combustion),Metal industries,Lead production,NA,2012,0.14,0.07,NA,NA,45
+Industrial (non-combustion),Metal industries,Lead production,NA,2013,0.14,0.07,NA,NA,45
+Industrial (non-combustion),Metal industries,Lead production,NA,2014,0.14,0.07,NA,NA,45
+Industrial (non-combustion),Metal industries,Lead production,NA,2015,0.14,0.07,NA,NA,45
+Industrial (non-combustion),Metal industries,Steel production,NA,2012,240.4,227.85,2116.29,1639.35,894.98
+Industrial (non-combustion),Metal industries,Steel production,NA,2013,244.7,231.93,2154.19,1668.71,911.01
+Industrial (non-combustion),Metal industries,Steel production,NA,2014,243.99,231.25,2147.87,1663.82,908.34
+Industrial (non-combustion),Metal industries,Steel production,NA,2015,243.27,230.57,2141.55,1658.92,905.67
+Industrial (non-combustion),Metal industries,Steel production,NA,2016,240.4,227.85,2116.29,1639.35,894.98
+Industrial (non-combustion),Metal industries,Steel production,NA,2017,245.06,232.27,2157.35,1671.16,912.35
+Industrial (non-combustion),Metal industries,Steel production,NA,2018,243.63,230.91,2144.71,1661.37,907
+Industrial (non-combustion),Metal industries,Steel production,NA,2019,241.12,228.53,2122.6,1644.24,897.65
+Industrial (non-combustion),Mineral products,Mineral products,NA,2012,136.85,65.92,NA,NA,892.22
+Industrial (non-combustion),Mineral products,Mineral products,NA,2013,152.71,72.48,NA,NA,961.95
+Industrial (non-combustion),Mineral products,Mineral products,NA,2014,168.86,78.82,NA,NA,984.05
+Industrial (non-combustion),Mineral products,Mineral products,NA,2015,177.57,79.82,NA,NA,1013.04
+Industrial (non-combustion),Mineral products,Mineral products,NA,2016,184.43,84.75,NA,NA,675.87
+Industrial (non-combustion),Mineral products,Mineral products,NA,2017,180.6,86.7,NA,NA,562.95
+Industrial (non-combustion),Mineral products,Mineral products,NA,2018,162.42,79.86,NA,NA,524.85
+Industrial (non-combustion),Mineral products,Mineral products,NA,2019,165.88,81.69,NA,NA,510.73
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2012,NA,NA,11.36,113.6,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2013,NA,NA,12.93,129.35,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2014,NA,NA,15.56,155.62,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2015,NA,NA,13.71,137.09,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2016,NA,NA,12.62,126.21,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2017,NA,NA,14.78,147.81,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2018,NA,NA,15.45,154.49,NA
+Industrial (non-combustion),Production of chemicals,Ammonia production,NA,2019,NA,NA,13.01,130.11,NA
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2012,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2013,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2014,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2015,104.7,82.84,NA,NA,1821.74
+Waste,Waste incineration,NA,NA,2014,0.04,0.02,0.37,4.66,0.25
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2016,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2017,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2018,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Fertiliser production,NA,2019,104.7,82.84,NA,NA,1821.74
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2012,53.58,42.39,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2013,61.38,48.56,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2014,74.18,58.69,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2015,65.31,51.68,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2016,60.16,47.6,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2017,70.38,55.68,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2018,73.55,58.2,NA,NA,NA
+Industrial (non-combustion),Production of chemicals,Urea production,NA,2019,61.94,49.01,NA,NA,NA
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2012,1213.58,910.19,0,1516.98,3033.96
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2013,1168.96,876.72,0,1461.2,2922.4
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2014,1142.78,857.09,0,1428.48,2856.95
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2015,1157.81,868.36,0,1447.26,2894.52
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2016,1150.61,862.96,0,1438.27,2876.53
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2017,1172.15,879.11,0,1465.19,2930.38
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2018,1144.31,858.24,0,1430.39,2860.78
+Industrial (non-combustion),Pulp and paper production,Pulp production,NA,2019,1153.53,865.15,0,1441.91,2883.83
+Agriculture,Animal housing,Broilers,NA,2012,178.8,17.88,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2013,186.27,18.63,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2014,200.18,20.02,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2015,216.85,21.69,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2016,230.24,23.02,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2017,237.31,23.73,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2018,243.57,24.36,NA,NA,NA
+Agriculture,Animal housing,Broilers,NA,2019,245.35,24.54,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2012,20.97,0.9,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2013,20.06,0.86,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2014,19.05,0.82,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2015,17.94,0.77,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2016,18.13,0.78,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2017,19.24,0.82,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2018,18.62,0.8,NA,NA,NA
+Agriculture,Animal housing,Fattening pigs,NA,2019,16.82,0.72,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2012,116.05,8.7,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2013,119.59,8.97,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2014,124.25,9.32,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2015,128.12,9.61,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2016,133.94,10.05,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2017,134.45,10.08,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2018,137.44,10.31,NA,NA,NA
+Agriculture,Animal housing,Laying hens,NA,2019,145.56,10.92,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2012,10.91,0.64,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2013,10.44,0.61,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2014,9.91,0.58,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2015,9.33,0.55,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2016,9.43,0.55,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2017,10.01,0.59,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2018,9.69,0.57,NA,NA,NA
+Agriculture,Animal housing,Sows,NA,2019,8.75,0.51,NA,NA,NA
+Agriculture,Field burning of agricultural residues,Barley,NA,2012,695.54,658.93,8139.02,292.86,61.01
+Agriculture,Field burning of agricultural residues,Barley,NA,2013,722.8,684.76,8458.03,304.34,63.4
+Agriculture,Field burning of agricultural residues,Barley,NA,2014,616.08,583.66,7209.23,259.4,54.04
+Agriculture,Field burning of agricultural residues,Barley,NA,2015,444.36,420.98,5199.82,187.1,38.98
+Agriculture,Field burning of agricultural residues,Barley,NA,2016,466.14,441.61,5454.69,196.27,40.89
+Agriculture,Field burning of agricultural residues,Barley,NA,2017,433.37,410.56,5071.21,182.47,38.02
+Agriculture,Field burning of agricultural residues,Barley,NA,2018,449.32,425.67,5257.79,189.19,39.41
+Agriculture,Field burning of agricultural residues,Barley,NA,2019,549.71,520.78,6432.57,231.46,48.22
+Agriculture,Field burning of agricultural residues,Oats,NA,2012,57.08,54.08,667.99,24.04,5.01
+Agriculture,Field burning of agricultural residues,Oats,NA,2013,97.36,92.24,1139.34,41,8.54
+Agriculture,Field burning of agricultural residues,Oats,NA,2014,104.85,99.33,1226.92,44.15,9.2
+Agriculture,Field burning of agricultural residues,Oats,NA,2015,58.83,55.74,688.46,24.77,5.16
+Agriculture,Field burning of agricultural residues,Oats,NA,2016,118.67,112.42,1388.65,49.97,10.41
+Agriculture,Field burning of agricultural residues,Oats,NA,2017,102.09,96.72,1194.62,42.98,8.96
+Agriculture,Field burning of agricultural residues,Oats,NA,2018,58.27,55.2,681.8,24.53,5.11
+Agriculture,Field burning of agricultural residues,Oats,NA,2019,76.39,72.37,893.95,32.17,6.7
+Agriculture,Field burning of agricultural residues,Wheat,NA,2012,1329.2,1259.25,15554.02,559.66,116.6
+Agriculture,Field burning of agricultural residues,Wheat,NA,2013,1333.73,1263.54,15607.03,561.57,116.99
+Agriculture,Field burning of agricultural residues,Wheat,NA,2014,1077.5,1020.79,12608.59,453.68,94.52
+Agriculture,Field burning of agricultural residues,Wheat,NA,2015,721.41,683.44,8441.79,303.75,63.28
+Agriculture,Field burning of agricultural residues,Wheat,NA,2016,1009.02,955.91,11807.28,424.85,88.51
+Agriculture,Field burning of agricultural residues,Wheat,NA,2017,1011.18,957.96,11832.64,425.76,88.7
+Agriculture,Field burning of agricultural residues,Wheat,NA,2018,753.56,713.89,8817.92,317.29,66.1
+Agriculture,Field burning of agricultural residues,Wheat,NA,2019,978.9,927.38,11454.89,412.17,85.87
+Biomass burning,Controlled burning,Forest land,NA,2012,831.77,614.38,5056.8,217.39,47.26
+Biomass burning,Controlled burning,Forest land,NA,2013,599.82,443.05,3646.65,156.77,34.08
+Biomass burning,Controlled burning,Forest land,NA,2014,557.67,411.92,3390.39,145.76,31.69
+Biomass burning,Controlled burning,Forest land,NA,2015,550.21,406.4,3345,143.8,31.26
+Biomass burning,Controlled burning,Forest land,NA,2016,563.38,416.13,3425.07,147.25,32.01
+Biomass burning,Controlled burning,Forest land,NA,2017,598.79,442.29,3640.38,156.5,34.02
+Biomass burning,Controlled burning,Forest land,NA,2018,602.43,444.98,3662.5,157.45,34.23
+Biomass burning,Controlled burning,Forest land,NA,2019,783.82,578.96,4765.3,204.86,44.54
+Biomass burning,Controlled burning,Grassland,NA,2012,3011.56,1959.33,23584.5,2177.03,126.99
+Biomass burning,Controlled burning,Grassland,NA,2013,3155.51,2052.98,24711.83,2281.09,133.06
+Biomass burning,Controlled burning,Grassland,NA,2014,2565.46,1669.1,20090.97,1854.55,108.18
+Biomass burning,Controlled burning,Grassland,NA,2015,1699.58,1105.75,13310,1228.62,71.67
+Biomass burning,Controlled burning,Grassland,NA,2016,1427.25,928.57,11177.29,1031.75,60.19
+Biomass burning,Controlled burning,Grassland,NA,2017,1319.98,858.78,10337.17,954.2,55.66
+Biomass burning,Controlled burning,Grassland,NA,2018,1178.34,766.63,9227.96,851.81,49.69
+Biomass burning,Controlled burning,Grassland,NA,2019,1156.16,752.2,9054.23,835.78,48.75
+Biomass burning,Wildfires,Forest land,NA,2012,1292.52,954.7,7857.94,337.82,73.44
+Biomass burning,Wildfires,Forest land,NA,2013,1025.35,757.36,6233.67,267.99,58.26
+Biomass burning,Wildfires,Forest land,NA,2014,1398.29,1032.83,8500.95,365.46,79.45
+Biomass burning,Wildfires,Forest land,NA,2015,3998.62,2953.53,24309.8,1045.09,227.19
+Biomass burning,Wildfires,Forest land,NA,2016,3208.33,2369.79,19505.17,838.54,182.29
+Biomass burning,Wildfires,Forest land,NA,2017,1232.49,910.37,7493.01,322.13,70.03
+Biomass burning,Wildfires,Forest land,NA,2018,5655.29,4177.2,34381.6,1478.09,321.32
+Biomass burning,Wildfires,Forest land,NA,2019,3895.91,2877.66,23685.36,1018.25,221.36
+Biomass burning,Wildfires,Grassland,NA,2012,1577.69,1026.45,12355.44,1140.5,66.53
+Biomass burning,Wildfires,Grassland,NA,2013,1362.81,886.65,10672.64,985.17,57.47
+Biomass burning,Wildfires,Grassland,NA,2014,1261.95,821.03,9882.73,912.25,53.21
+Biomass burning,Wildfires,Grassland,NA,2015,1199.71,780.53,9395.31,867.26,50.59
+Biomass burning,Wildfires,Grassland,NA,2016,3354.99,2182.77,26274.04,2425.3,141.48
+Biomass burning,Wildfires,Grassland,NA,2017,3611.65,2349.75,28284.04,2610.83,152.3
+Biomass burning,Wildfires,Grassland,NA,2018,1268.02,824.97,9930.25,916.64,53.47
+Biomass burning,Wildfires,Grassland,NA,2019,1820.46,1184.39,14256.58,1315.99,76.77
+Waste,Open burning (garden waste),NA,NA,2012,1601.7,1601.7,8408.93,600.64,100.11
+Waste,Open burning (garden waste),NA,NA,2013,1601.7,1601.7,8408.93,600.64,100.11
+Waste,Open burning (garden waste),NA,NA,2014,1621.31,1621.31,8511.87,607.99,101.33
+Waste,Open burning (garden waste),NA,NA,2015,1640.92,1640.92,8614.81,615.34,102.56
+Waste,Open burning (garden waste),NA,NA,2016,1660.52,1660.52,8717.75,622.7,103.78
+Waste,Open burning (garden waste),NA,NA,2017,1680.13,1680.13,8820.69,630.05,105.01
+Waste,Open burning (garden waste),NA,NA,2018,1699.74,1699.74,8923.63,637.4,106.23
+Waste,Open burning (garden waste),NA,NA,2019,1699.74,1699.74,8923.63,637.4,106.23
+Waste,Waste incineration,NA,NA,2012,0.04,0.02,0.37,4.66,0.25
+Waste,Waste incineration,NA,NA,2013,0.04,0.02,0.37,4.66,0.25
+Waste,Waste incineration,NA,NA,2015,0.04,0.02,0.37,4.66,0.25
+Waste,Waste incineration,NA,NA,2016,0.04,0.02,0.37,4.66,0.25
+Waste,Waste incineration,NA,NA,2017,0.04,0.02,0.37,4.66,0.25
+Waste,Waste incineration,NA,NA,2018,0.04,0.02,0.37,4.66,0.25
+Waste,Waste incineration,NA,NA,2019,0.04,0.02,0.37,4.66,0.25
