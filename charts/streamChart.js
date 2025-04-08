@@ -41,16 +41,11 @@
     const totalEmission = d3.sum(transformed, d => d.Value);
     const avgEmission = (totalEmission / years.length).toFixed(2);
 
-    // Highest Emissions Year
+    // Updated Highest Emissions Year logic based on current filters
     const emissionsByYear = d3.rollups(
-      chartData.flatMap(row =>
-        pollutantKeys.map(key => ({
-          year: row.year,
-          value: +row[key] || 0
-        }))
-      ),
-      v => d3.sum(v, d => d.value),
-      d => d.year
+      transformed,
+      v => d3.sum(v, d => d.Value),
+      d => d.Year
     );
     const [yearMax, maxVal] = emissionsByYear.reduce((a, b) => (b[1] > a[1] ? b : a));
 
