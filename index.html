@@ -1,27 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D3.js Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        svg {
-            border: 1px solid #ccc;
-        }
-    </style>
-    <!-- Load D3.js from CDN -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unified Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f8f8f8;
+    }
+    .dashboard { display: flex; height: 100vh; }
+    .sidebar {
+      width: 180px;
+      background-color: #f44336;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 10px;
+      gap: 10px;
+      transition: width 0.3s;
+    }
+    .sidebar.collapsed { width: 70px; }
+    .sidebar .toggle {
+      align-self: flex-end;
+      margin-bottom: 10px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .sidebar .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      font-size: 15px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+    .sidebar .item i {
+      font-size: 18px;
+      min-width: 20px;
+      text-align: center;
+    }
+    .sidebar.collapsed .item span {
+      display: none;
+    }
+    .sidebar .item:hover,
+    .sidebar .item.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .top-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .filter {
+      background: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+    }
+    .filter select {
+      margin-left: 6px;
+      font-size: 14px;
+      padding: 2px 6px;
+    }
+    .stat-cards {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .card span {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .red { background: #ffe5e5; color: #b71c1c; }
+    .blue { background: #e3f2fd; color: #0d47a1; }
+    .yellow { background: #fffde7; color: #f57f17; }
+    .pink { background: #fce4ec; color: #ad1457; }
+    .chart-section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    #chart svg {
+      width: 100%;
+      height: 400px;
+    }
+    .action-buttons {
+      margin-top: 20px;
+      text-align: right;
+    }
+    .action-buttons button {
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      background-color: #ff6b6b;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <h1>D3.js Visualization</h1>
-    <div id="visualization"></div>
-    
-    <!-- Remove the node_modules reference and keep only the main.js script -->
-    <script src="src/main.js"></script>
+  <div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+      <button class="toggle" onclick="toggleSidebar()">☰</button>
+      <div class="item" data-chart="table" onclick="loadChart('table', event)">
+        <i class="fas fa-database"></i> <span>Data</span>
+      </div>
+      <div class="item" data-chart="stream" onclick="loadChart('stream', event)">
+        <i class="fas fa-chart-area"></i> <span>Stream Chart</span>
+      </div>
+      <div class="item" data-chart="arrow" onclick="loadChart('arrow', event)">
+        <i class="fas fa-arrow-up"></i> <span>Arrow Chart</span>
+      </div>
+      <div class="item" data-chart="bar" onclick="loadChart('bar', event)">
+        <i class="fas fa-chart-bar"></i> <span>Bar Chart</span>
+      </div>
+      <div class="item" data-chart="dot" onclick="loadChart('dot', event)">
+        <i class="fas fa-dot-circle"></i> <span>Dot Chart</span>
+      </div>
+      <div class="item" data-chart="donut" onclick="loadChart('donut', event)">
+        <i class="fas fa-chart-pie"></i> <span>Donut Chart</span>
+      </div>
+      <div class="item" data-chart="custom" onclick="loadChart('custom', event)">
+        <i class="fas fa-shapes"></i> <span>Custom D3</span>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="top-bar">
+        <div class="filter">Years:
+          <select id="yearSelect">
+            <option value="all">2012–2019</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+        <div class="filter">Pollutants:
+          <select id="pollutantSelect">
+            <option value="all">All</option>
+            <option value="pm10">PM10</option>
+            <option value="pm2_5">PM2.5</option>
+            <option value="co">CO</option>
+            <option value="nox">NOx</option>
+            <option value="so2">SO2</option>
+          </select>
+        </div>
+        <div class="filter"><i class="fas fa-industry"></i> Emission Type / Source</div>
+        <div class="filter"><i class="fas fa-map-marker-alt"></i> Regions / Areas</div>
+        <div class="filter"><i class="fas fa-ruler"></i> Measurement Units</div>
+      </div>
+      <div class="stat-cards">
+        <div class="card red">Total Emission <span id="totalEmission">$0</span></div>
+        <div class="card blue">Average Emissions per Year <span id="avgEmission">$0</span></div>
+        <div class="card yellow">Year with Highest Emissions <span id="yearMax">year</span></div>
+        <div class="card pink">Dominant Pollutant <span id="topPollutant">Name</span></div>
+      </div>
+      <div class="chart-section">
+        <div id="chart"></div>
+      </div>
+      <div class="action-buttons">
+        <button>Preview</button>
+        <button>Share</button>
+      </div>
+    </main>
+  </div>
+  <script>
+    let chartData = [];
+    d3.csv("data_set/air-pollutant-emissions-2012-2019.csv").then(data => {
+      chartData = data;
+      document.getElementById("pollutantSelect").addEventListener("change", () => loadChart("stream"));
+      document.getElementById("yearSelect").addEventListener("change", () => loadChart("stream"));
+      loadChart("stream");
+    });
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+    function loadChart(type, event = null) {
+      document.querySelectorAll(".sidebar .item").forEach(item => {
+        if (item.getAttribute("data-chart") === type) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+      d3.select("#chart").html("");
+      document.querySelectorAll("script[data-dynamic]").forEach(s => s.remove());
+      const chartMap = {
+        table: 'charts/tableView.js',
+        stream: 'charts/streamChart.js',
+        arrow: 'charts/arrowChart.js',
+        bar: 'charts/barChart.js',
+        dot: 'charts/dotChart.js',
+        donut: 'charts/donutChart.js',
+        custom: 'src/main.js'
+      };
+      const script = document.createElement("script");
+      script.src = chartMap[type];
+      script.setAttribute("data-dynamic", "true");
+      document.body.appendChild(script);
+    }
+  </script>
 </body>
 </html>
