@@ -1,11 +1,15 @@
+// Stream Chart rendering logic wrapped in an IIFE to isolate scope
 (function () {
   if (typeof chartData !== 'undefined' && chartData.length > 0) {
+
+    // Get selected filters for year and pollutant
     const selectedYear = document.getElementById("yearSelect").value;
     const selectedPollutant = document.getElementById("pollutantSelect").value;
 
     const pollutantKeys = ["pm10", "pm2_5", "co", "nox", "so2"];
     const activeKeys = selectedPollutant === "all" ? pollutantKeys : [selectedPollutant];
 
+    // Transform the filtered data into a structure suitable for stream graph
     const transformed = [];
     chartData.forEach(row => {
       if (selectedYear !== "all" && row.year !== selectedYear) return;
@@ -23,6 +27,7 @@
     const years = [...new Set(transformed.map(d => d.Year))].sort();
     const pollutants = [...new Set(transformed.map(d => d.Pollutant))];
 
+    // Create a matrix of year vs pollutants
     const dataByYear = years.map(year => {
       const row = { year };
       pollutants.forEach(p => {
@@ -32,21 +37,24 @@
       return row;
     });
 
+    // === Calculate statistics to display in dashboard cards ===
     const totalEmission = d3.sum(transformed, d => d.Value);
     const avgEmission = (totalEmission / years.length).toFixed(2);
 
+    // Highest Emissions Year
     const emissionsByYear = d3.rollups(
-  chartData.flatMap(row =>
-    pollutantKeys.map(key => ({
-      year: row.year,
-      value: +row[key] || 0
-    }))
-  ),
-  v => d3.sum(v, d => d.value),
-  d => d.year
-);
+      chartData.flatMap(row =>
+        pollutantKeys.map(key => ({
+          year: row.year,
+          value: +row[key] || 0
+        }))
+      ),
+      v => d3.sum(v, d => d.value),
+      d => d.year
+    );
     const [yearMax, maxVal] = emissionsByYear.reduce((a, b) => (b[1] > a[1] ? b : a));
 
+    // Most dominant pollutant in selected dataset
     const emissionsByPollutant = d3.rollups(
       transformed,
       v => d3.sum(v, d => d.Value),
@@ -54,11 +62,13 @@
     );
     const [topPollutant, topValue] = emissionsByPollutant.reduce((a, b) => (b[1] > a[1] ? b : a));
 
+    // Inject values into dashboard stat cards
     document.getElementById("totalEmission").textContent = "$" + totalEmission.toFixed(2);
     document.getElementById("avgEmission").textContent = "$" + avgEmission;
     document.getElementById("yearMax").textContent = yearMax;
     document.getElementById("topPollutant").textContent = topPollutant;
 
+    // === Stream Chart Rendering ===
     const stack = d3.stack().keys(pollutants).offset(d3.stackOffsetWiggle);
     const series = stack(dataByYear);
 
@@ -88,6 +98,7 @@
       .y1(d => y(d[1]))
       .curve(d3.curveBasis);
 
+    // Tooltip setup
     const tooltip = d3.select("#chart")
       .append("div")
       .attr("class", "tooltip")
@@ -99,6 +110,7 @@
       .style("pointer-events", "none")
       .style("opacity", 0);
 
+    // Draw the stream layers
     svg.selectAll("path")
       .data(series)
       .join("path")
@@ -130,6 +142,7 @@
       .duration(1000)
       .attr("opacity", 0.8);
 
+    // Axes
     svg.append("g")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x));
@@ -137,6 +150,7 @@
     svg.append("g")
       .call(d3.axisLeft(y));
 
+    // Legend setup
     const legend = svg.append("g").attr("transform", `translate(${width - 100}, 0)`);
     pollutants.forEach((pollutant, i) => {
       legend.append("rect")

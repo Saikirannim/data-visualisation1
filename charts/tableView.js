@@ -1,4 +1,4 @@
-// Inject CSS dynamically using JS
+// Inject table-specific CSS dynamically into the document head
 const style = document.createElement("style");
 style.textContent = `
   #chart table {
@@ -48,10 +48,12 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Function to create table view and allow CSV export & dark mode
 (function () {
   if (typeof chartData !== 'undefined' && chartData.length > 0) {
     const columns = Object.keys(chartData[0]);
 
+    // Controls for Export and Dark Mode
     const controls = d3.select("#chart")
       .append("div")
       .attr("class", "table-controls")
@@ -68,6 +70,7 @@ document.head.appendChild(style);
         document.body.classList.toggle("dark");
       });
 
+    // Create the table
     const table = d3.select("#chart").append("table");
 
     table.append("thead").append("tr")
@@ -85,6 +88,7 @@ document.head.appendChild(style);
         .text(d => d);
     });
 
+    // Download function to export table as CSV
     function downloadCSV() {
       const rows = document.querySelectorAll("#chart table tr");
       let csv = [];
