@@ -1,17 +1,14 @@
 (function () {
   if (typeof chartData !== 'undefined' && chartData.length > 0) {
-    // Get filters
     const selectedYear = document.getElementById("yearSelect").value;
     const selectedPollutant = document.getElementById("pollutantSelect").value;
 
     const pollutantKeys = ["pm10", "pm2_5", "co", "nox", "so2"];
     const activeKeys = selectedPollutant === "all" ? pollutantKeys : [selectedPollutant];
 
-    // Filtered + Transformed data
     const transformed = [];
     chartData.forEach(row => {
       if (selectedYear !== "all" && row.year !== selectedYear) return;
-
       activeKeys.forEach(key => {
         if (row[key]) {
           transformed.push({
@@ -34,6 +31,33 @@
       });
       return row;
     });
+
+    const totalEmission = d3.sum(transformed, d => d.Value);
+    const avgEmission = (totalEmission / years.length).toFixed(2);
+
+    const emissionsByYear = d3.rollups(
+  chartData.flatMap(row =>
+    pollutantKeys.map(key => ({
+      year: row.year,
+      value: +row[key] || 0
+    }))
+  ),
+  v => d3.sum(v, d => d.value),
+  d => d.year
+);
+    const [yearMax, maxVal] = emissionsByYear.reduce((a, b) => (b[1] > a[1] ? b : a));
+
+    const emissionsByPollutant = d3.rollups(
+      transformed,
+      v => d3.sum(v, d => d.Value),
+      d => d.Pollutant
+    );
+    const [topPollutant, topValue] = emissionsByPollutant.reduce((a, b) => (b[1] > a[1] ? b : a));
+
+    document.getElementById("totalEmission").textContent = "$" + totalEmission.toFixed(2);
+    document.getElementById("avgEmission").textContent = "$" + avgEmission;
+    document.getElementById("yearMax").textContent = yearMax;
+    document.getElementById("topPollutant").textContent = topPollutant;
 
     const stack = d3.stack().keys(pollutants).offset(d3.stackOffsetWiggle);
     const series = stack(dataByYear);
@@ -129,6 +153,6 @@
         .attr("fill", "#333");
     });
 
-    console.log("✅ Stream Graph reloaded with filters");
+    console.log("✅ Stream Chart rendered with updated stats");
   }
 })();

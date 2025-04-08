@@ -1,5 +1,5 @@
 // Inject CSS dynamically using JS
-const tableStyle = document.createElement("style");
+const style = document.createElement("style");
 style.textContent = `
   #chart table {
     width: 100%;
@@ -31,7 +31,6 @@ style.textContent = `
     background-color: #f1f1f1;
     cursor: pointer;
   }
-
   body.dark #chart table {
     background: #1e1e1e;
     color: #ddd;
@@ -47,12 +46,12 @@ style.textContent = `
     background-color: #2a2a2a;
   }
 `;
-document.head.appendChild(tableStyle);
+document.head.appendChild(style);
+
 (function () {
   if (typeof chartData !== 'undefined' && chartData.length > 0) {
     const columns = Object.keys(chartData[0]);
 
-    // --- Controls ---
     const controls = d3.select("#chart")
       .append("div")
       .attr("class", "table-controls")
@@ -69,9 +68,8 @@ document.head.appendChild(tableStyle);
         document.body.classList.toggle("dark");
       });
 
-    // --- Table Creation ---
     const table = d3.select("#chart").append("table");
-    
+
     table.append("thead").append("tr")
       .selectAll("th")
       .data(columns)
@@ -87,7 +85,6 @@ document.head.appendChild(tableStyle);
         .text(d => d);
     });
 
-    // --- CSV Export Function ---
     function downloadCSV() {
       const rows = document.querySelectorAll("#chart table tr");
       let csv = [];
@@ -96,7 +93,7 @@ document.head.appendChild(tableStyle);
         const rowData = Array.from(cols).map(cell => `"${cell.innerText}"`);
         csv.push(rowData.join(","));
       });
-      const blob = new Blob([csv.join("\\n")], { type: "text/csv" });
+      const blob = new Blob([csv.join("\n")], { type: "text/csv" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
