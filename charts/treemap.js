@@ -1,6 +1,6 @@
 // Set dimensions for the treemap and UI
-const width = 1200;
-const height = 800;
+const width = 800;
+const height = 400;
 const uiHeight = 50;
 
 // Load the CSV data
@@ -13,7 +13,7 @@ d3.csv("data_set/air-pollutant-emissions-2012-2019.csv").then(data => {
   console.log("Unique fuels in dataset:", allFuels);
 
   // Create the SVG element with extra height for UI
-  const svg = d3.select("body").append("svg")
+  const svg = d3.select("#chart").append("svg")
     .attr("width", width)
     .attr("height", height + uiHeight)
     .attr("style", "max-width: 100%; height: auto;")
