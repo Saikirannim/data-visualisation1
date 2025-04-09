@@ -191,6 +191,22 @@
             <option value="2019">2019</option>
           </select>
         </div>
+        <div class="filter">Fuel Type:
+          <select id="fuelSelect">
+            <option value="all">All</option>
+            <option value="Bituminous coal">Bituminous coal</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Fuel oil">Fuel Oil</option>
+            <option value="LPG">LPG</option>
+            <option value="Lignite coal">Lignite Oil</option>
+            <option value="Natural gas">Natural Gas</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Sub-bituminous coal">Sub-bituminous coal</option>
+            <option value="Biogas">Biogas</option>
+            <option value="Crude oil">Biogas</option>
+            <option value="Wood">Wood</option>
+          </select>
+        </div>
         <div class="filter">Pollutants:
           <select id="pollutantSelect">
             <option value="all">All</option>
@@ -267,6 +283,8 @@
       script.setAttribute("data-dynamic", "true");
       document.body.appendChild(script);
     }
+
+    document.getElementById("fuelSelect").addEventListener("change", () => loadChart("line"));
   </script>
 </body>
 </html>
