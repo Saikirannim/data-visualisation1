@@ -162,8 +162,8 @@
       <div class="item" data-chart="arrow" onclick="loadChart('arrow', event)">
         <i class="fas fa-arrow-up"></i> <span>Arrow Chart</span>
       </div>
-      <div class="item" data-chart="bar" onclick="loadChart('bar', event)">
-        <i class="fas fa-chart-bar"></i> <span>Bar Chart</span>
+      <div class="item" data-chart="line" onclick="loadChart('line', event)">
+        <i class="fas fa-chart-line"></i> <span>Line Chart</span>
       </div>
       <div class="item" data-chart="dot" onclick="loadChart('dot', event)">
         <i class="fas fa-dot-circle"></i> <span>Dot Chart</span>
@@ -189,6 +189,22 @@
             <option value="2017">2017</option>
             <option value="2018">2018</option>
             <option value="2019">2019</option>
+          </select>
+        </div>
+        <div class="filter">Fuel Type:
+          <select id="fuelSelect">
+            <option value="all">All</option>
+            <option value="Bituminous coal">Bituminous coal</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Fuel oil">Fuel Oil</option>
+            <option value="LPG">LPG</option>
+            <option value="Lignite coal">Lignite Oil</option>
+            <option value="Natural gas">Natural Gas</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Sub-bituminous coal">Sub-bituminous coal</option>
+            <option value="Biogas">Biogas</option>
+            <option value="Crude oil">Biogas</option>
+            <option value="Wood">Wood</option>
           </select>
         </div>
         <div class="filter">Pollutants:
@@ -256,7 +272,7 @@
         table: 'charts/tableView.js',
         stream: 'charts/streamChart.js',
         arrow: 'charts/arrowChart.js',
-        bar: 'charts/barChart.js',
+        line: 'charts/lineChart.js',
         dot: 'charts/dotChart.js',
         donut: 'charts/donutChart.js',
         custom: 'charts/treemap.js'
@@ -267,6 +283,8 @@
       script.setAttribute("data-dynamic", "true");
       document.body.appendChild(script);
     }
+
+    document.getElementById("fuelSelect").addEventListener("change", () => loadChart("line"));
   </script>
 </body>
 </html>
