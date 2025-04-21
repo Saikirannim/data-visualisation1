@@ -9,7 +9,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: "Segoe UI", system-ui, sans-serif;
       background-color: #f8f8f8;
     }
 
@@ -147,6 +147,70 @@
       font-weight: bold;
       cursor: pointer;
     }
+    
+    #chart .sunburst {
+        height: 600px;
+    }
+    
+    .sunburst .textContainer {
+        text-anchor: middle;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    
+    .sunburst .textContainer text {
+        font-size: 10px;
+        font-weight: 800;
+        z-index: 200;
+    }
+    
+    .sunburst .textContainer .percentage {
+        font-weight: 600;
+    }
+    
+    .sunburst .navContainer {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .sunburst .centre {
+        fill: white;
+    }
+    
+    .sunburst .arcPart[data-depth="0"] {
+        display: none;
+    }
+    
+    .sunburst .arcPart {
+        stroke: white;
+    }
+    
+    .sunburst .clickableArc,
+    .sunburst .centre,
+    .sunburst .textContainer g,
+    .sunburst .navContainer text {
+        cursor: pointer;
+    }
+    
+    .sunburst .clickableArc, 
+    .sunburst .textContainer g,
+    .sunburst .navContainer text {
+        transition: opacity 0.1s ease-in-out;
+    }
+    
+    .sunburst .clickableArc:hover,
+    .sunburst .textContainer g:hover,
+    .sunburst .navContainer text:hover {
+        opacity: 0.5;
+    }
+    
+    .sunburst .arcPart[data-depth="4"] {
+        opacity: 0.6;
+    }
+    
+    .sunburst .arcPart[data-depth="5"] {
+        opacity: 0.3;
+    }  
   </style>
 </head>
 <body>
