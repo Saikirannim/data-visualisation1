@@ -223,16 +223,10 @@
       <div class="item" data-chart="stream" onclick="loadChart('stream', event)">
         <i class="fas fa-chart-area"></i> <span>Stream Chart</span>
       </div>
-      <div class="item" data-chart="arrow" onclick="loadChart('arrow', event)">
-        <i class="fas fa-arrow-up"></i> <span>Arrow Chart</span>
-      </div>
       <div class="item" data-chart="line" onclick="loadChart('line', event)">
         <i class="fas fa-chart-line"></i> <span>Line Chart</span>
       </div>
-      <div class="item" data-chart="dot" onclick="loadChart('dot', event)">
-        <i class="fas fa-dot-circle"></i> <span>Dot Chart</span>
-      </div>
-      <div class="item" data-chart="donut" onclick="loadChart('donut', event)">
+       <div class="item" data-chart="donut" onclick="loadChart('donut', event)">
         <i class="fas fa-chart-pie"></i> <span>Donut Chart</span>
       </div>
       <div class="item" data-chart="custom" onclick="loadChart('custom', event)">
@@ -335,9 +329,7 @@
       const chartMap = {
         table: 'charts/tableView.js',
         stream: 'charts/streamChart.js',
-        arrow: 'charts/arrowChart.js',
         line: 'charts/lineChart.js',
-        dot: 'charts/dotChart.js',
         donut: 'charts/donutChart.js',
         custom: 'charts/treemap.js'
       };
