@@ -58,8 +58,8 @@
     const [topPollutant, topValue] = emissionsByPollutant.reduce((a, b) => (b[1] > a[1] ? b : a));
 
     // Inject values into dashboard stat cards
-    document.getElementById("totalEmission").textContent = "$" + totalEmission.toFixed(2);
-    document.getElementById("avgEmission").textContent = "$" + avgEmission;
+    document.getElementById("totalEmission").textContent = totalEmission.toFixed(2) + " tonnes";
+    document.getElementById("avgEmission").textContent = avgEmission + " tonnes";
     document.getElementById("yearMax").textContent = yearMax;
     document.getElementById("topPollutant").textContent = topPollutant;
 
