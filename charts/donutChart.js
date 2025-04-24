@@ -1,6 +1,6 @@
-(function () {
-   "use strict";
+"use strict";
    
+(function () {
    const subColours = {
       "Energy (combustion)": {
          "root": "#FF9500",
@@ -82,14 +82,12 @@
       
       const data = d3.hierarchy(grouped)
          .sum(d => [d.nox, d.pm2_5, d.co, d.pm10, d.so2]
-               .map(a => parseInt(a) || 0)
+               .map(a => parseFloat(a) || 0)
                .reduce((a, b) => a + b, 0)
          )
-         .each(d => computeValues(d));
+         .eachAfter(d => computeValues(d));
       
-      d3.partition().size([tau, radius])(data);
-      
-      console.log(data);
+      d3.partition().size([tau, radius])(data);      
       return data;
    }
    
@@ -252,21 +250,13 @@
          
          offset += 1.2;
       }
-         
-      
    }
    
    function computeValues(d) {
       d.current = d;
       
-      if (d.children) {
-         d.total = d.children
-               .map(d => d.value)
-               .reduce((a, b) => a + b, 0)
-      }
-   
       if (d.parent) {
-         d.percentage = (d.value / d.parent.total) * 100;
+         d.percentage = (d.value / d.parent.value) * 100;
       }
    }
    
@@ -276,9 +266,7 @@
    
    const data = setupData();
    const svg = setupSvg();
-   
-   console.log(svg, data);
-   
+      
    const arc = d3.arc()
       .startAngle(d => d.x0)
       .endAngle(d => d.x1)
