@@ -13,12 +13,15 @@
     console.log("Number of unique fuels:", allFuels.length);
     console.log("Unique fuels in dataset:", allFuels);
 
+    // Create the chart container
+    const chartContainer = d3.select("#chart");
+    
     // Create the SVG element with extra height for UI
-    const svg = d3.select("#chart").append("svg")
+    const svg = chartContainer.append("svg")
       .attr("width", width)
       .attr("height", height + uiHeight)
       .attr("style", "max-width: 100%; height: auto;")
-      .style("font", "12px Arial, sans-serif");
+      .style("font", "12px 'Segoe UI', system-ui, sans-serif");
 
     // Define a color scale for fuels and pollutants
     const color = d3.scaleOrdinal()
@@ -28,6 +31,17 @@
     // Create scales
     const x = d3.scaleLinear().rangeRound([0, width]);
     const y = d3.scaleLinear().rangeRound([0, height]);
+
+    // Create tooltip like other charts
+    const tooltip = chartContainer.append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("background", "#fff")
+      .style("padding", "6px 10px")
+      .style("border", "1px solid #ccc")
+      .style("border-radius", "5px")
+      .style("pointer-events", "none")
+      .style("opacity", 0);
 
     // Custom tiling function
     function tile(node, x0, y0, x1, y1) {
@@ -128,7 +142,7 @@
           const text = d3.select(this).append("text")
             .text(label)
             .style("font-size", `${fontSize}px`)
-            .style("fill", "#000")
+            .style("fill", "#333")
             .attr("text-anchor", "start");
 
           if (isVertical) {
@@ -163,35 +177,19 @@
 
         group.call(position, root);
 
-        // Tooltip
-        svg.select(".tooltip").remove();
-        const tooltip = svg.append("g")
-          .attr("class", "tooltip")
-          .style("display", "none");
-
-        tooltip.append("rect")
-          .attr("width", 150)
-          .attr("height", 20)
-          .attr("fill", "#333")
-          .attr("opacity", 0.8);
-
-        tooltip.append("text")
-          .attr("x", 5)
-          .attr("y", 15)
-          .style("font-size", "12px")
-          .style("fill", "#fff");
-
+        // Event handlers for tooltip
         node
           .on("mouseover", function(event, d) {
-            tooltip.style("display", "block");
-            tooltip.select("text").text(`${d.data.name} (${d.value.toFixed(0)})`);
+            tooltip.style("opacity", 1);
           })
           .on("mousemove", function(event, d) {
-            const [xPos, yPos] = d3.pointer(event, svg.node());
-            tooltip.attr("transform", `translate(${xPos},${yPos + 20})`);
+            tooltip
+              .html(`<strong>${d.data.name}</strong><br>Emission: ${d.value.toFixed(2)} tonnes`)
+              .style("left", (event.pageX + 15) + "px")
+              .style("top", (event.pageY - 20) + "px");
           })
           .on("mouseout", function() {
-            tooltip.style("display", "none");
+            tooltip.style("opacity", 0);
           });
       }
 
@@ -256,8 +254,9 @@
     uiGroup.append("text")
       .text("Select Year:")
       .attr("y", 20)
-      .style("font-size", "16px")
-      .style("font-family", "Arial, sans-serif");
+      .style("font-size", "14px")
+      .style("fill", "#333")
+      .style("font-family", "'Segoe UI', system-ui, sans-serif");
 
     const select = uiGroup.append("foreignObject")
       .attr("x", 100)
@@ -266,7 +265,9 @@
       .attr("height", 30)
       .append("xhtml:select")
       .style("font-size", "14px")
+      .style("font-family", "'Segoe UI', system-ui, sans-serif")
       .style("width", "100px")
+      .style("padding", "6px")
       .on("change", function() {
         const selectedYear = this.value;
         updateTreemap(selectedYear);
