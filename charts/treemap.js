@@ -13,11 +13,17 @@
     console.log("Number of unique fuels:", allFuels.length);
     console.log("Unique fuels in dataset:", allFuels);
 
-    // Create the chart container
+    // Create the chart container and center only the SVG
     const chartContainer = d3.select("#chart");
     
+    // Create a wrapper div for the SVG to ensure proper centering
+    const svgWrapper = chartContainer.append("div")
+      .style("display", "flex")
+      .style("justify-content", "center")
+      .style("width", "100%");
+    
     // Create the SVG element with extra height for UI
-    const svg = chartContainer.append("svg")
+    const svg = svgWrapper.append("svg")
       .attr("width", width)
       .attr("height", height + uiHeight)
       .attr("style", "max-width: 100%; height: auto;")
@@ -289,5 +295,54 @@
     // Set initial year to the first available year
     select.property("value", allYears[0]);
     updateTreemap(allYears[0]);
+
+    // Add description text after the chart (only if it doesn't exist)
+    let descriptionContainer = chartContainer.select(".chart-description");
+    
+    if (descriptionContainer.empty()) {
+      descriptionContainer = chartContainer.append("div")
+        .attr("class", "chart-description")
+        .style("margin-top", "20px")
+        .style("padding", "15px")
+        .style("background-color", "#f8f9fa")
+        .style("border-radius", "8px")
+        .style("font-family", "'Segoe UI', system-ui, sans-serif")
+        .style("line-height", "1.6");
+
+      descriptionContainer.append("h3")
+        .text("Understanding the Air Pollutant Emissions Treemap")
+        .style("margin-top", "0")
+        .style("margin-bottom", "10px")
+        .style("color", "#333")
+        .style("font-size", "16px");
+
+      descriptionContainer.append("p")
+        .html(`This interactive treemap visualization displays air pollutant emissions across different fuel types from 2012 to 2019. 
+              The visualization has two levels:`)
+        .style("margin-bottom", "10px")
+        .style("color", "#555");
+
+      const list = descriptionContainer.append("ul")
+        .style("margin", "10px 0")
+        .style("padding-left", "20px")
+        .style("color", "#555");
+
+      list.append("li")
+        .html(`<strong>Level 1 (Fuels):</strong> Each rectangle represents a different fuel type (e.g., petrol, diesel, coal). 
+              The size of each rectangle is proportional to the total emissions from that fuel type.`);
+
+      list.append("li")
+        .html(`<strong>Level 2 (Pollutants):</strong> Click on any fuel rectangle to see the breakdown of pollutants 
+              (PM10, PM2.5, CO, NOx, SO2) for that specific fuel. The size of each pollutant rectangle represents its 
+              contribution to the total emissions from that fuel.`);
+
+      descriptionContainer.append("p")
+        .html(`Use the year dropdown to explore how emissions from different fuels and pollutants have changed over time. 
+              Hover over any rectangle to see detailed emission values and percentages. Click on the main area outside 
+              the rectangles to zoom back out to the fuel level view.`)
+        .style("margin-top", "10px")
+        .style("margin-bottom", "0")
+        .style("color", "#555");
+    }
   }
 })();
