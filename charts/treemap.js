@@ -43,19 +43,10 @@
       .style("pointer-events", "none")
       .style("opacity", 0);
 
-    // Custom tiling function
-    function tile(node, x0, y0, x1, y1) {
-      d3.treemapBinary(node, 0, 0, width, height);
-      for (const child of node.children) {
-        child.x0 = x0 + child.x0 / width * (x1 - x0);
-        child.x1 = x0 + child.x1 / width * (x1 - x0);
-        child.y0 = y0 + child.y0 / height * (y1 - y0);
-        child.y1 = y0 + child.y1 / height * (y1 - y0);
-      }
-    }
-
-    // Treemap layout
-    const treemap = d3.treemap().tile(tile);
+    // Treemap layout - use d3 default tiling
+    const treemap = d3.treemap()
+      .size([width, height])
+      .paddingInner(1);
 
     // Variable to hold the current group
     let group;
@@ -70,41 +61,44 @@
 
       // Build two-level hierarchy: fuels > pollutants
       const rootData = { name: "root", children: [] };
+      
       allFuels.forEach(fuel => {
         const rows = nestedData.get(fuel) || [];
-        const totalEmissions = d3.sum(rows, d => {
-          const pm10 = isNaN(+d.pm10) ? 0 : +d.pm10;
-          const pm2_5 = isNaN(+d.pm2_5) ? 0 : +d.pm2_5;
-          const co = isNaN(+d.co) ? 0 : +d.co;
-          const nox = isNaN(+d.nox) ? 0 : +d.nox;
-          const so2 = isNaN(+d.so2) ? 0 : +d.so2;
-          return pm10 + pm2_5 + co + nox + so2;
-        });
-        const fuelNode = {
-          name: fuel,
-          value: totalEmissions,
-          children: [
-            { name: "pm10", value: d3.sum(rows, d => isNaN(+d.pm10) ? 0 : +d.pm10) },
-            { name: "pm2_5", value: d3.sum(rows, d => isNaN(+d.pm2_5) ? 0 : +d.pm2_5) },
-            { name: "co", value: d3.sum(rows, d => isNaN(+d.co) ? 0 : +d.co) },
-            { name: "nox", value: d3.sum(rows, d => isNaN(+d.nox) ? 0 : +d.nox) },
-            { name: "so2", value: d3.sum(rows, d => isNaN(+d.so2) ? 0 : +d.so2) }
-          ]
+        
+        // Calculate pollutant values for this fuel
+        const pollutantValues = {
+          pm10: d3.sum(rows, d => isNaN(+d.pm10) ? 0 : +d.pm10),
+          pm2_5: d3.sum(rows, d => isNaN(+d.pm2_5) ? 0 : +d.pm2_5),
+          co: d3.sum(rows, d => isNaN(+d.co) ? 0 : +d.co),
+          nox: d3.sum(rows, d => isNaN(+d.nox) ? 0 : +d.nox),
+          so2: d3.sum(rows, d => isNaN(+d.so2) ? 0 : +d.so2)
         };
-        rootData.children.push(fuelNode);
+        
+        // Only add fuel node if it has some emissions
+        const totalEmissions = Object.values(pollutantValues).reduce((sum, val) => sum + val, 0);
+        
+        if (totalEmissions > 0) {
+          const fuelNode = {
+            name: fuel,
+            children: [
+              { name: "pm10", value: pollutantValues.pm10 },
+              { name: "pm2_5", value: pollutantValues.pm2_5 },
+              { name: "co", value: pollutantValues.co },
+              { name: "nox", value: pollutantValues.nox },
+              { name: "so2", value: pollutantValues.so2 }
+            ].filter(d => d.value > 0) // Only include pollutants with positive values
+          };
+          rootData.children.push(fuelNode);
+        }
       });
 
       // Create the hierarchy and compute sums
       const hierarchy = d3.hierarchy(rootData)
-        .sum(d => d.value || 0)
+        .sum(d => d.value)
         .sort((a, b) => b.value - a.value);
 
       // Compute initial layout
       treemap(hierarchy);
-
-      // Reset scales to root level
-      x.domain([hierarchy.x0, hierarchy.x1]);
-      y.domain([hierarchy.y0, hierarchy.y1]);
 
       // Clear previous treemap content
       svg.selectAll(".treemap-group").remove();
@@ -128,13 +122,17 @@
           });
 
         node.append("rect")
+          .attr("x", d => d.x0)
+          .attr("y", d => d.y0)
+          .attr("width", d => d.x1 - d.x0)
+          .attr("height", d => d.y1 - d.y0)
           .attr("fill", d => color(d.data.name))
           .attr("stroke", "#fff")
           .attr("stroke-width", 1);
 
         node.each(function(d) {
-          const rectWidth = x(d.x1) - x(d.x0);
-          const rectHeight = y(d.y1) - y(d.y0);
+          const rectWidth = d.x1 - d.x0;
+          const rectHeight = d.y1 - d.y0;
           // Calculate percentage relative to parent or total
           const parent = d.parent;
           const percentage = parent ? ((d.value / parent.value) * 100).toFixed(1) : 100;
@@ -150,9 +148,9 @@
 
           if (isVertical) {
             text
-              .attr("x", 3)
-              .attr("y", 15)
-              .attr("transform", "rotate(90, 3, 15)");
+              .attr("x", d.x0 + 3)
+              .attr("y", d.y0 + 15)
+              .attr("transform", `rotate(90, ${d.x0 + 3}, ${d.y0 + 15})`);
             const textWidth = text.node().getBBox().width;
             if (textWidth > rectHeight - 4) {
               let truncated = label;
@@ -164,8 +162,8 @@
             if (rectHeight < 20) text.style("display", "none");
           } else {
             text
-              .attr("x", 5)
-              .attr("y", fontSize + 2);
+              .attr("x", d.x0 + 5)
+              .attr("y", d.y0 + fontSize + 2);
             const textWidth = text.node().getBBox().width;
             if (textWidth > rectWidth - 10) {
               let truncated = label;
@@ -177,8 +175,6 @@
             if (rectHeight < fontSize + 4) text.style("display", "none");
           }
         });
-
-        group.call(position, root);
 
         // Event handlers for tooltip
         node
@@ -198,58 +194,55 @@
           });
       }
 
-      function position(group, root) {
-        group.selectAll("g")
-          .attr("transform", d => `translate(${x(d.x0)},${y(d.y0)})`)
-          .select("rect")
-          .attr("width", d => x(d.x1) - x(d.x0))
-          .attr("height", d => y(d.y1) - y(d.y0));
-      }
-
       function zoomin(d) {
         const group0 = group.attr("pointer-events", "none");
         const group1 = group = svg.append("g")
-          .attr("class", "treemap-group")
-          .call(render, d);
+          .attr("class", "treemap-group");
 
-        x.domain([d.x0, d.x1]);
-        y.domain([d.y0, d.y1]);
+        // Create a new root with proper hierarchy structure
+        const subRoot = d3.hierarchy({name: d.data.name, children: d.data.children})
+          .sum(d => d.value)
+          .sort((a, b) => b.value - a.value);
 
-        svg.transition()
+        // Compute treemap layout
+        treemap(subRoot);
+        
+        group1.call(render, subRoot);
+
+        // Transition the old group out and new group in
+        group0.transition()
           .duration(750)
-          .call(t => group0.transition(t).remove()
-            .call(position, d.parent))
-          .call(t => group1.transition(t)
-            .attrTween("opacity", () => d3.interpolate(0, 1))
-            .call(position, d))
-          .on("end", () => {
-            // Ensure text labels are visible after transition
-            group1.selectAll("text").style("display", null);
-          });
+          .style("opacity", 0)
+          .remove();
 
-        console.log(`Zoomed to ${d.data.name}:`, d.children.map(c => `${c.data.name} (${(c.value / d.value * 100).toFixed(1)}%)`));
+        group1.style("opacity", 0)
+          .transition()
+          .duration(750)
+          .style("opacity", 1);
+
+        console.log(`Zoomed to ${d.data.name}:`, subRoot.children.map(c => `${c.data.name} (${(c.value / subRoot.value * 100).toFixed(1)}%)`));
       }
 
       function zoomout(root) {
         const group0 = group.attr("pointer-events", "none");
         const group1 = group = svg.append("g")
-          .attr("class", "treemap-group")
-          .call(render, root);
+          .attr("class", "treemap-group");
 
-        x.domain([root.x0, root.x1]);
-        y.domain([root.y0, root.y1]);
+        // Recompute the root layout
+        treemap(root);
+        
+        group1.call(render, root);
 
-        svg.transition()
+        // Transition
+        group0.transition()
           .duration(750)
-          .call(t => group0.transition(t).remove()
-            .attrTween("opacity", () => d3.interpolate(1, 0))
-            .call(position, root))
-          .call(t => group1.transition(t)
-            .call(position, root))
-          .on("end", () => {
-            // Ensure text labels are visible after transition
-            group1.selectAll("text").style("display", null);
-          });
+          .style("opacity", 0)
+          .remove();
+
+        group1.style("opacity", 0)
+          .transition()
+          .duration(750)
+          .style("opacity", 1);
 
         console.log("Zoomed out to fuels:", root.children.map(c => `${c.data.name} (${(c.value / root.value * 100).toFixed(1)}%)`));
       }
