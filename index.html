@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unified Dashboard</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* Same styles - only removed filter CSS */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: "Segoe UI", system-ui, sans-serif; background-color: #f8f8f8; }
     .dashboard { display: flex; height: 100vh; }
@@ -30,7 +30,8 @@
     .chart-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; }
     #chart svg { width: 800px; max-width: 100%; height: 400px; display: block; }
     .action-buttons { margin-top: 20px; text-align: right; }
-    .action-buttons button { padding: 8px 16px; margin-left: 10px; border: none; background-color: #ff6b6b; color: white; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    .action-buttons button { padding: 8px 16px; margin-left: 10px; border: none; background-color: #ff6b6b; color: white; border-radius: 5px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; }
+    .action-buttons button:hover { background-color: #ff4c4c; }
   </style>
 </head>
 <body>
@@ -55,8 +56,6 @@
   </aside>
 
   <main class="main-content">
-    <!-- NO Top Filters Now -->
-
     <div class="stat-cards">
       <div class="card red">Total Emissions <span id="totalEmission">0 tonnes</span></div>
       <div class="card blue">Average Emissions per Year <span id="avgEmission">0 tonnes</span></div>
@@ -147,6 +146,27 @@ function updateCards() {
   document.getElementById("yearMax").textContent = yearMax;
   document.getElementById("topPollutant").textContent = topPollutant;
 }
+
+// ========== Preview and Share ==========
+
+// New Preview: Open chart in new tab
+document.querySelector(".action-buttons button:nth-child(1)").addEventListener("click", function () {
+  html2canvas(document.getElementById("chart")).then(canvas => {
+    const imgDataUrl = canvas.toDataURL();
+    const win = window.open();
+    win.document.write('<img src="' + imgDataUrl + '" style="width:100%; height:auto;"/>');
+  });
+});
+
+// Share: Download PNG
+document.querySelector(".action-buttons button:nth-child(2)").addEventListener("click", function () {
+  html2canvas(document.getElementById("chart")).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `chart_${currentChart}_${new Date().getTime()}.png`;
+    link.href = canvas.toDataURL();
+    link.click();
+  });
+});
 </script>
 </body>
 </html>
