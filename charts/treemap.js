@@ -1,10 +1,9 @@
 // Fixed Treemap Chart - uses global chartData like other charts
 (function() {
   if (typeof chartData !== "undefined" && chartData.length > 0) {
-    // Set dimensions for the treemap and UI
+    // Set dimensions for the treemap
     const width = 800;
     const height = 400;
-    const uiHeight = 50;
 
     // Step 1: Get all unique years and fuels
     const allYears = [...new Set(chartData.map(d => d.year))].sort();
@@ -13,19 +12,42 @@
     console.log("Number of unique fuels:", allFuels.length);
     console.log("Unique fuels in dataset:", allFuels);
 
-    // Create the chart container and center only the SVG
+    // Create the chart container
     const chartContainer = d3.select("#chart");
-    
-    // Create a wrapper div for the SVG to ensure proper centering
-    const svgWrapper = chartContainer.append("div")
+    chartContainer.html("");
+
+    // Create a centered wrapper for both filter and chart
+    const chartWrapper = chartContainer.append("div")
+      .style("width", `${width}px`)
+      .style("margin", "0 auto");
+
+    // Add the filter div inside the wrapper
+    const filterDiv = chartWrapper.append("div")
+      .attr("class", "filter-container")
+      .style("margin-bottom", "20px")
       .style("display", "flex")
-      .style("justify-content", "center")
+      .style("gap", "10px");
+
+    // Year Select
+    const yearSelect = filterDiv.append("select")
+      .attr("id", "treemapYearSelect")
+      .style("padding", "6px");
+
+    yearSelect.selectAll("option")
+      .data(allYears)
+      .enter()
+      .append("option")
+      .attr("value", d => d)
+      .text(d => d);
+
+    // Create a wrapper div for the SVG
+    const svgWrapper = chartWrapper.append("div")
       .style("width", "100%");
     
-    // Create the SVG element with extra height for UI
+    // Create the SVG element
     const svg = svgWrapper.append("svg")
       .attr("width", width)
-      .attr("height", height + uiHeight)
+      .attr("height", height)
       .attr("style", "max-width: 100%; height: auto;")
       .style("font", "12px 'Segoe UI', system-ui, sans-serif");
 
@@ -259,41 +281,14 @@
       });
     }
 
-    // Add UI: Dropdown for year selection
-    const uiGroup = svg.append("g")
-      .attr("transform", `translate(10, ${height + 10})`);
-
-    uiGroup.append("text")
-      .text("Select Year:")
-      .attr("y", 20)
-      .style("font-size", "14px")
-      .style("fill", "#333")
-      .style("font-family", "'Segoe UI', system-ui, sans-serif");
-
-    const select = uiGroup.append("foreignObject")
-      .attr("x", 100)
-      .attr("y", 5)
-      .attr("width", 100)
-      .attr("height", 30)
-      .append("xhtml:select")
-      .style("font-size", "14px")
-      .style("font-family", "'Segoe UI', system-ui, sans-serif")
-      .style("width", "100px")
-      .style("padding", "6px")
-      .on("change", function() {
-        const selectedYear = this.value;
-        updateTreemap(selectedYear);
-      });
-
-    select.selectAll("option")
-      .data(allYears)
-      .enter()
-      .append("xhtml:option")
-      .attr("value", d => d)
-      .text(d => d);
+    // Event handler for year select
+    yearSelect.on("change", function() {
+      const selectedYear = this.value;
+      updateTreemap(selectedYear);
+    });
 
     // Set initial year to the first available year
-    select.property("value", allYears[0]);
+    yearSelect.property("value", allYears[0]);
     updateTreemap(allYears[0]);
 
     // Add description text after the chart (only if it doesn't exist)
