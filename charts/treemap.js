@@ -135,7 +135,10 @@
         node.each(function(d) {
           const rectWidth = x(d.x1) - x(d.x0);
           const rectHeight = y(d.y1) - y(d.y0);
-          const label = `${d.data.name} (${d.value.toFixed(0)})`;
+          // Calculate percentage relative to parent or total
+          const parent = d.parent;
+          const percentage = parent ? ((d.value / parent.value) * 100).toFixed(1) : 100;
+          const label = `${d.data.name} (${percentage}%)`;
           const fontSize = 12;
           const isVertical = rectHeight > rectWidth;
 
@@ -183,8 +186,10 @@
             tooltip.style("opacity", 1);
           })
           .on("mousemove", function(event, d) {
+            const parent = d.parent;
+            const percentage = parent ? ((d.value / parent.value) * 100).toFixed(1) : 100;
             tooltip
-              .html(`<strong>${d.data.name}</strong><br>Emission: ${d.value.toFixed(2)} tonnes`)
+              .html(`<strong>${d.data.name}</strong><br>Emission: ${d.value.toFixed(2)} tonnes<br>Percentage: ${percentage}%`)
               .style("left", (event.pageX + 15) + "px")
               .style("top", (event.pageY - 20) + "px");
           })
@@ -216,9 +221,13 @@
             .call(position, d.parent))
           .call(t => group1.transition(t)
             .attrTween("opacity", () => d3.interpolate(0, 1))
-            .call(position, d));
+            .call(position, d))
+          .on("end", () => {
+            // Ensure text labels are visible after transition
+            group1.selectAll("text").style("display", null);
+          });
 
-        console.log(`Zoomed to ${d.data.name}:`, d.children.map(c => `${c.data.name} (${c.value.toFixed(0)})`));
+        console.log(`Zoomed to ${d.data.name}:`, d.children.map(c => `${c.data.name} (${(c.value / d.value * 100).toFixed(1)}%)`));
       }
 
       function zoomout(root) {
@@ -236,9 +245,13 @@
             .attrTween("opacity", () => d3.interpolate(1, 0))
             .call(position, root))
           .call(t => group1.transition(t)
-            .call(position, root));
+            .call(position, root))
+          .on("end", () => {
+            // Ensure text labels are visible after transition
+            group1.selectAll("text").style("display", null);
+          });
 
-        console.log("Zoomed out to fuels:", root.children.map(c => `${c.data.name} (${c.value.toFixed(0)})`));
+        console.log("Zoomed out to fuels:", root.children.map(c => `${c.data.name} (${(c.value / root.value * 100).toFixed(1)}%)`));
       }
 
       // Click to zoom out
