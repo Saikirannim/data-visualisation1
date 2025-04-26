@@ -51,10 +51,15 @@
       .attr("style", "max-width: 100%; height: auto;")
       .style("font", "12px 'Segoe UI', system-ui, sans-serif");
 
-    // Define a color scale for fuels and pollutants
+    // Define a colorblind-friendly palette for fuels
     const color = d3.scaleOrdinal()
-      .domain(allFuels.concat(["pm10", "pm2_5", "co", "nox", "so2"]))
-      .range(d3.schemeTableau10.concat(["#ff6f61", "#6b5b95", "#88d8b0", "#ffcc5c", "#ffeead"]));
+      .domain(allFuels)
+      .range(d3.schemeTableau10);  // This is a colorblind-friendly palette
+    
+    // Colorblind-friendly pollutant colors using Wong's palette
+    const pollutantColor = d3.scaleOrdinal()
+      .domain(["pm10", "pm2_5", "co", "nox", "so2"])
+      .range(["#E69F00", "#56B4E9", "#009E73", "#F0E442", "#CC79A7"]);
 
     // Create scales
     const x = d3.scaleLinear().rangeRound([0, width]);
@@ -154,7 +159,13 @@
           .attr("y", d => d.y0)
           .attr("width", d => d.x1 - d.x0)
           .attr("height", d => d.y1 - d.y0)
-          .attr("fill", d => color(d.data.name))
+          .attr("fill", d => {
+            // Use pollutant colors for pollutants, fuel colors for fuels
+            if (!d.children) {
+              return pollutantColor(d.data.name);
+            }
+            return color(d.data.name);
+          })
           .attr("stroke", "#fff")
           .attr("stroke-width", 1);
 
@@ -171,7 +182,15 @@
           const text = d3.select(this).append("text")
             .text(label)
             .style("font-size", `${fontSize}px`)
-            .style("fill", "#333")
+            .style("fill", d => {
+              // Use dark text for light backgrounds (yellow), white for others
+              const name = d.data.name;
+              if (name === "nox" || (d.parent && d.parent.data.name === "nox")) {
+                return "#000";  // Black text on yellow
+              }
+              return "#fff";  // White text on other colors
+            })
+            .style("font-weight", "600")
             .attr("text-anchor", "start");
 
           if (isVertical) {
