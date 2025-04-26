@@ -338,8 +338,7 @@
 
       descriptionContainer.append("p")
         .html(`Use the year dropdown to explore how emissions from different fuels and pollutants have changed over time. 
-              Hover over any rectangle to see detailed emission values and percentages. Click on the main area outside 
-              the rectangles to zoom back out to the fuel level view.`)
+              Hover over any rectangle to see detailed emission values and percentages.`)
         .style("margin-top", "10px")
         .style("margin-bottom", "0")
         .style("color", "#555");
