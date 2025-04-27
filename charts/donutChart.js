@@ -92,8 +92,14 @@
    }
    
    function setupSvg() {
-      return d3.select("#chart")
-         .append("svg")
+      // Create a centered wrapper like the treemap
+      const chartContainer = d3.select("#chart");
+      
+      const chartWrapper = chartContainer.append("div")
+         .style("width", `${width}px`)
+         .style("margin", "0 auto");
+      
+      return chartWrapper.append("svg")
          .attr("class", "sunburst")
          .attr("viewBox", `0 0 ${width} ${height}`)
          .append("g")
@@ -299,4 +305,58 @@
    addText(data);
    addNav(data);
    addClickTargets(paths);
+
+   // Add description text after the chart (only if it doesn't exist)
+   let descriptionContainer = d3.select("#chart").select(".chart-description");
+   
+   if (descriptionContainer.empty()) {
+      descriptionContainer = d3.select("#chart").append("div")
+         .attr("class", "chart-description")
+         .style("margin-top", "20px")
+         .style("padding", "15px")
+         .style("background-color", "#f8f9fa")
+         .style("border-radius", "8px")
+         .style("font-family", "'Segoe UI', system-ui, sans-serif")
+         .style("line-height", "1.6");
+
+      descriptionContainer.append("h3")
+         .text("Understanding the Air Pollutant Emissions Donut Chart")
+         .style("margin-top", "0")
+         .style("margin-bottom", "10px")
+         .style("color", "#333")
+         .style("font-size", "16px");
+
+      descriptionContainer.append("p")
+         .html(`This interactive donut chart visualization displays air pollutant emissions for 2019, 
+               organized hierarchically by sectors and sub-sectors. The visualization has four levels:`)
+         .style("margin-bottom", "10px")
+         .style("color", "#555");
+
+      const list = descriptionContainer.append("ul")
+         .style("margin", "10px 0")
+         .style("padding-left", "20px")
+         .style("color", "#555");
+
+      list.append("li")
+         .html(`<strong>Level 1 (Sectors):</strong> The outermost ring shows major emission sources like 
+               Energy, Transport, Agriculture, etc. Each segment's size represents its percentage of total emissions.`);
+
+      list.append("li")
+         .html(`<strong>Level 2 (Classes):</strong> Click on any sector to see its classes (e.g., Road transportation, Aviation 
+               within the Transport sector).`);
+
+      list.append("li")
+         .html(`<strong>Level 3 (Sub-classes):</strong> Click further to drill down into sub-classes for more detailed 
+               emission sources.`);
+
+      list.append("li")
+         .html(`<strong>Level 4 (Fuel types):</strong> The deepest level shows the specific fuel types used in combustion sources.`);
+
+      descriptionContainer.append("p")
+         .html(`Click on any arc to drill down into its sub-categories. Click the center circle or use the navigation 
+               breadcrumbs in the top-left corner to navigate back up the hierarchy.`)
+         .style("margin-top", "10px")
+         .style("margin-bottom", "0")
+         .style("color", "#555");
+   }
 })();
