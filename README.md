@@ -15,5 +15,7 @@ An application which shows a variety of graphs for air quality data. The data is
 
 `/wireframes` `/user_flows`: prototypes for UI
 
-`/src`: the actual code
+`/charts` and index.html: the actual code
+
+tested and executed using the live-server extension
 
