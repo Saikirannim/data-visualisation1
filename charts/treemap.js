@@ -5,7 +5,7 @@
     const width = 800;
     const height = 400;
 
-    // Step 1: Get all unique years and fuels
+    // Get all unique years and fuels
     const allYears = [...new Set(chartData.map(d => d.year))].sort();
     const allFuels = [...new Set(chartData.map(d => d.fuel))].filter(f => f !== "NA");
     console.log("Unique years:", allYears);
@@ -310,7 +310,7 @@
     yearSelect.property("value", allYears[0]);
     updateTreemap(allYears[0]);
 
-    // Add description text after the chart (only if it doesn't exist)
+    // Add description text after the chart
     let descriptionContainer = chartContainer.select(".chart-description");
     
     if (descriptionContainer.empty()) {

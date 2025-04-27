@@ -6,7 +6,12 @@
     const chartContainer = d3.select("#chart");
     chartContainer.html("");
 
-    const filterDiv = chartContainer.append("div")
+    // Create a centered wrapper for both filter and chart
+    const chartWrapper = chartContainer.append("div")
+      .style("width", "800px")
+      .style("margin", "0 auto");
+
+    const filterDiv = chartWrapper.append("div")
       .attr("class", "filter-container")
       .style("margin-bottom", "20px")
       .style("display", "flex")
@@ -49,10 +54,14 @@
       renderLineChart();
     });
 
+    // Create a wrapper div for the SVG inside the chartWrapper
+    const svgWrapper = chartWrapper.append("div")
+      .style("width", "100%");
+
     renderLineChart(); // Initial Draw
 
     function renderLineChart() {
-      chartContainer.selectAll("svg").remove();
+      svgWrapper.selectAll("svg").remove();
       chartContainer.selectAll(".tooltip").remove();
 
       const filtered = selectedLineFuel === "all"
@@ -80,7 +89,7 @@
             width = 800 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
-      const svg = chartContainer.append("svg")
+      const svg = svgWrapper.append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -169,6 +178,58 @@
           .attr("font-size", "12px")
           .attr("fill", "#333");
       });
+    }
+
+    // Add description text after the chart (only if it doesn't exist)
+    let descriptionContainer = chartContainer.select(".line-chart-description");
+    
+    if (descriptionContainer.empty()) {
+      descriptionContainer = chartContainer.append("div")
+        .attr("class", "line-chart-description")
+        .style("margin-top", "20px")
+        .style("padding", "15px")
+        .style("background-color", "#f8f9fa")
+        .style("border-radius", "8px")
+        .style("font-family", "'Segoe UI', system-ui, sans-serif")
+        .style("line-height", "1.6");
+
+      descriptionContainer.append("h3")
+        .text("Understanding the Air Pollutant Emissions Line Chart")
+        .style("margin-top", "0")
+        .style("margin-bottom", "10px")
+        .style("color", "#333")
+        .style("font-size", "16px");
+
+      descriptionContainer.append("p")
+        .html(`This line chart visualization displays trends in air pollutant emissions over time from 2012 to 2019. 
+              Each line represents a specific pollutant, showing how its emission levels have changed across years.`)
+        .style("margin-bottom", "10px")
+        .style("color", "#555");
+
+      const list = descriptionContainer.append("ul")
+        .style("margin", "10px 0")
+        .style("padding-left", "20px")
+        .style("color", "#555");
+
+      list.append("li")
+        .html(`<strong>Pollutant Filtering:</strong> Use the left dropdown to select specific pollutants (PM10, PM2.5, CO, NOx, SO2) 
+              or view all pollutants simultaneously. This allows you to focus on trends for individual pollutants or compare multiple pollutants.`);
+
+      list.append("li")
+        .html(`<strong>Fuel Type Filtering:</strong> Use the right dropdown to filter emissions by fuel type. 
+              This helps you understand which fuels contribute most to specific pollutant emissions over time.`);
+
+      list.append("li")
+        .html(`<strong>Interactive Data Points:</strong> Hover over any point on the lines to see the exact emission 
+              values for that year and pollutant. The dots on the lines represent actual data points from the dataset.`);
+
+      descriptionContainer.append("p")
+        .html(`The line chart is particularly useful for identifying trends, seasonal patterns, and the impact of 
+              environmental policies on air pollutant emissions over the years. Combining both filters allows for 
+              detailed analysis of specific pollutant-fuel combinations.`)
+        .style("margin-top", "10px")
+        .style("margin-bottom", "0")
+        .style("color", "#555");
     }
   }
 })();
