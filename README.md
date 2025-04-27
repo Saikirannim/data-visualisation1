@@ -19,3 +19,5 @@ An application which shows a variety of graphs for air quality data. The data is
 
 tested and executed using the live-server extension
 
+Link to SWEN422 group project video: https://youtu.be/nQpfO-CXpPg
+
