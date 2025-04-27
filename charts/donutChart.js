@@ -1,6 +1,83 @@
 "use strict";
    
 (function () {
+   const sunburstStyles = `
+       #chart .sunburst {
+           height: 600px;
+       }
+       
+       @media (max-width: 700px) {
+          #chart .sunburst {
+               height: auto;
+           }
+       }
+       
+       #chart .sunburstBox {
+          margin: 0 auto;
+          max-width: 700px;
+       }
+       
+       .sunburst .textContainer {
+           text-anchor: middle;
+           user-select: none;
+           -webkit-user-select: none;
+       }
+       
+       .sunburst .textContainer text {
+           font-size: 10px;
+           font-weight: 800;
+           z-index: 200;
+       }
+       
+       .sunburst .textContainer .percentage {
+           font-weight: 600;
+       }
+       
+       .sunburst .navContainer {
+           font-weight: 600;
+           font-size: 14px;
+       }
+       
+       .sunburst .centre {
+           fill: white;
+       }
+       
+       .sunburst .arcPart[data-depth="0"] {
+           display: none;
+       }
+       
+       .sunburst .arcPart {
+           stroke: white;
+       }
+       
+       .sunburst .clickableArc,
+       .sunburst .centre,
+       .sunburst .textContainer g,
+       .sunburst .navContainer text {
+           cursor: pointer;
+       }
+       
+       .sunburst .clickableArc, 
+       .sunburst .textContainer g,
+       .sunburst .navContainer text {
+           transition: opacity 0.1s ease-in-out;
+       }
+       
+       .sunburst .clickableArc:hover,
+       .sunburst .textContainer g:hover,
+       .sunburst .navContainer text:hover {
+           opacity: 0.5;
+       }
+       
+       .sunburst .arcPart[data-depth="4"] {
+           opacity: 0.6;
+       }
+       
+       .sunburst .arcPart[data-depth="5"] {
+           opacity: 0.3;
+       } 
+   `;
+   
    const subColours = {
       "Energy (combustion)": {
          "root": "#FF9500",
@@ -94,10 +171,12 @@
    function setupSvg() {
       // Create a centered wrapper like the treemap
       const chartContainer = d3.select("#chart");
+      const styles = chartContainer.append("style");
+
+      styles.node().innerHTML = `${sunburstStyles}`;
       
       const chartWrapper = chartContainer.append("div")
-         .style("width", `${width}px`)
-         .style("margin", "0 auto");
+         .attr("class", "sunburstBox");
       
       return chartWrapper.append("svg")
          .attr("class", "sunburst")
